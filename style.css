@@ -431,25 +431,25 @@ main {
 
 .healthok_banner {
     width: 100%;
-    height: 85vh;
+    height: 95vh;
     display: flex;
     justify-content: flex-end;
-    background-image: url('./images/healthok_banner.jpg');
+    background-image: url('./images/healthok_banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
-    padding: 0 2rem;
+    padding: 0 5rem;
 }
 
 .health_box {
-    width: 30%;
+    width: 35%;
     margin-top: 2rem;
     transition: all ease 0.5s;
 }
 
 .health_box h3 {
     color: var(--green);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     transition: all ease 0.5s;
     font-family: 'semibold';
 }
@@ -457,6 +457,8 @@ main {
 .health_box p {
     color: var(--darkgreen);
     font-family: 'regular';
+    font-size: 1.5rem;
+    line-height: 1.7rem;
 }
 
 .buy_now {
@@ -475,25 +477,25 @@ main {
 
 .healthok_gummies {
     width: 100%;
-    height: 85vh;
+    height: 95vh;
     display: flex;
     justify-content: flex-start;
-    background-image: url('./images/healthok_gummies.jpg');
+    background-image: url('./images/healthok_gummies.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
-    padding: 0 2rem;
+    padding: 0 5rem;
 }
 
 .gummies_box {
-    width: 27%;
+    width: 35%;
     margin-top: 2rem;
     transition: all ease 0.5s;
 }
 
 .gummies_box h3 {
     color: var(--lightgreen);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     transition: all ease 0.5s;
     font-family: 'semibold';
 }
@@ -501,6 +503,8 @@ main {
 .gummies_box p {
     color: var(--white);
     font-family: 'regular';
+    font-size: 1.5rem;
+    line-height: 1.7rem;
 }
 
 .buy_now2 {
