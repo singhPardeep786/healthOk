@@ -30,9 +30,15 @@ html,body {
 
 :root {
     --blue: #3254BA;
+    --iconbg: #1E1E65;
     --black: #303030;
     --white: #F8FCFE;
+    --lightgreen: #E6FFF2;
+    --green: #0A8044;
+    --darkgreen: #032011;
     --lightblue: #BFE4F7;
+    --gradientbtn: linear-gradient(to right, #39C874, #0E844A);
+    --gradientbtn2: linear-gradient(to right, #FF9C40, #FF7300);
 }
 
 .regular {
@@ -184,7 +190,7 @@ main {
 }
 
 .social_heading_box h5 {
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.5rem;
     font-weight: 100;
     font-size: 1.1rem;
 }
@@ -194,7 +200,332 @@ main {
     font-size: 3rem;
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider_video {
+    width: 100%;
+    height: 600px;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 0.5s;
+  }
+  
+  .slider_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    display: none;
+  }
+
+  .left_icon,
+  .right_icon {
+    width: 80px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0 1.4rem;
+    background-color: var(--iconbg);
+    transition: all ease 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .left_icon::after,
+  .right_icon::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    background-color: var(--blue);
+    border-radius: 50%;
+    bottom: -300%;
+    left: -50%;
+    transition: all ease 0.5s;
+    z-index: -1;
+  }
+
+  .left_icon:hover::after,
+  .right_icon:hover::after {
+    bottom: -180%;
+  }
+
+  .left_icon img {
+    transform: rotate(180deg);
+  }
+
+  .left_icon:active,
+  .right_icon:active {
+    scale: 0.9;
+  }
+
+  .swiper_padding {
+    padding-bottom: 5rem!important;
+  }
+  
+  .slider_navigation {
+    width: 5rem;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    top: 95%!important;
+  }
+
+  .swiper-button-prev {
+    left: 0%!important;
+    /* transform: translateX(-47%); */
+  }
+
+  .swiper-button-next {
+    right: 0%!important;
+    /* transform: translateX(-47%); */
+  }
+
 /*----========SECTION SOCIAL END =========----*/
+
+
+/*----========SECTION CALCULATE START =========----*/
+
+.box {
+    width: 100%;
+    height: 550px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+.grid_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 1rem;
+}
+
+.know_more_btn {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--iconbg);
+    padding: 1rem 1.7rem;
+    border: 1px solid var(--iconbg);
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.know_more_btn:hover {
+    color: var(--iconbg);
+}
+
+.know_more_btn::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    background-color: var(--white);
+    border-radius: 50%;
+    left: -50%;
+    bottom: -300%;
+    transition: all ease 0.5s;
+    z-index: -1;
+}
+
+.know_more_btn:hover::after {
+    bottom: -180%;
+}
+
+/*----========SECTION CALCULATE END =========----*/
+
+
+/*----========SECTION HEALTHOK MULTIVITAMINS START =========----*/
+
+.healthok_banner {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('./images/healthok_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 0 2rem;
+}
+
+.health_box {
+    width: 30%;
+    margin-top: 2rem;
+    transition: all ease 0.5s;
+}
+
+.health_box h3 {
+    color: var(--green);
+    font-size: 2.5rem;
+    transition: all ease 0.5s;
+    font-family: 'semibold';
+}
+
+.health_box p {
+    color: var(--darkgreen);
+    font-family: 'regular';
+}
+
+.buy_now {
+    color: var(--white);
+    background: var(--gradientbtn);
+    font-family: 'semibold';
+    font-size: 1.3rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.2rem;
+}
+
+/*----========SECTION HEALTHOK MULTIVITAMINS END =========----*/
+
+
+/*----========SECTION HEALTHOK GUMMIES START =========----*/
+
+.healthok_gummies {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url('./images/healthok_gummies.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 0 2rem;
+}
+
+.gummies_box {
+    width: 27%;
+    margin-top: 2rem;
+    transition: all ease 0.5s;
+}
+
+.gummies_box h3 {
+    color: var(--lightgreen);
+    font-size: 2.5rem;
+    transition: all ease 0.5s;
+    font-family: 'semibold';
+}
+
+.gummies_box p {
+    color: var(--white);
+    font-family: 'regular';
+}
+
+.buy_now2 {
+    color: var(--white);
+    background: var(--gradientbtn2);
+    font-family: 'semibold';
+    font-size: 1.3rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.2rem;
+}
+
+/*----========SECTION HEALTHOK GUMMIES END =========----*/
+
+/*----========SECTION BRANDS START =========----*/
+
+.logos_main_div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5rem;
+}
+
+.logo_reel_animation {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: reel linear 15s infinite;
+}
+
+@keyframes reel {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.slide {
+    /* width: 15%; */
+    flex: 0 0 15%;
+}
+
+.slide:nth-child(2){
+    /* width: 7%; */
+    flex: 0 0 7%;
+}
+
+.logos_main_div:hover .logo_reel_animation {
+    animation-play-state: paused;
+}
+
+/*----========SECTION BRANDS END =========----*/
+
+
+/*----========FOOTER START =========----*/
+
+.footer_bg {
+    background-color: var(--iconbg);
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_box1 {
+    width: 60%;
+}
+
+.footer_logo {
+    width: 25%;
+}
+
+/*----========FOOTER END =========----*/
 
 
 /*----======== RESPONSIVE CODES =========----*/
@@ -207,7 +538,128 @@ main {
     .mankind_logo img {
         width: 35%;
     }
+
+    .social_heading_box {
+        width: 100%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 2.5rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.95rem;
+    }
+
+    .box {
+        height: 500px;
+    }
+
+    .health_box,
+    .gummies_box {
+        width: 70%;
+    }
+
+    .health_box h3,
+    .gummies_box h3 {
+        font-size: 2rem;
+    }
+
+    .health_box p,
+    .gummies_box p {
+        font-size: 0.9rem;
+    }
 }
+
+@media (min-width: 453px) and (max-width: 767px){
+    .social_heading_box {
+        width: 80%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 2.5rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.95rem;
+    }
+
+    .box {
+        height: 500px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .social_heading_box {
+        width: 60%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 2.5rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.85rem;
+    }
+
+    .box {
+        height: 500px;
+    }
+
+    .health_box,
+    .gummies_box {
+        width: 60%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1220px){
+    .social_heading_box {
+        width: 50%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 3rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.85rem;
+    }
+
+    .box {
+        height: 500px;
+    }
+
+    .health_box,
+    .gummies_box {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1220px) and (max-width: 1420px){
+
+    .health_box h3,
+    .gummies_box h3 {
+        font-size: 2rem;
+    }
+
+    .health_box p,
+    .gummies_box p {
+        font-size: 0.9rem;
+    }
+}
+/* @media (min-width: 993px) and (max-width: 1220px){
+    .social_heading_box {
+        width: 50%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 3rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.85rem;
+    }
+} */
 
 
 @media (min-width: 786px) {

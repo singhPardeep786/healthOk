@@ -28,6 +28,7 @@ function toggleHamburgerMenu() {
 
 document.addEventListener('DOMContentLoaded', toggleHamburgerMenu);
 
+
 function videoLoadOnObserve(){
     document.addEventListener("DOMContentLoaded", function () {
         const videos = document.querySelectorAll('.video_section video[data-src]');
@@ -47,20 +48,63 @@ function videoLoadOnObserve(){
           }, {threshold: 0.4});
           observer.observe(video);
         });
-      });
+    });
 
 }
 videoLoadOnObserve()
 
+function sliderVideosLoadOnObserve(){
+    document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll('.slider_video video[data-src]');
+        videos.forEach(video => {
+          const src = video.getAttribute('data-src');
+          if (!src) return;
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                if (!video.src) {
+                  video.src = src;
+                }
+                video.play();
+                obs.unobserve(video);
+              }
+            });
+          }, {threshold: 0.4});
+          observer.observe(video);
+        });
+    });
+
+}
+sliderVideosLoadOnObserve()
+
+
 function swiperSlider(){
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20,
-        speed: 1200,
+        speed: 1000,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        }
       });
 }
 swiperSlider();
