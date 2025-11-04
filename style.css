@@ -32,9 +32,11 @@ html,body {
     --blue: #3254BA;
     --iconbg: #1E1E65;
     --black: #303030;
+    --transparentblack: #303030a4;
     --white: #F8FCFE;
     --lightgreen: #E6FFF2;
     --green: #0A8044;
+    --green2: #39C874;
     --darkgreen: #032011;
     --lightblue: #BFE4F7;
     --gradientbtn: linear-gradient(to right, #39C874, #0E844A);
@@ -336,10 +338,49 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    
+    gap: 0.5rem;
+    text-align: center;
+    bottom: -100%;
+    left: 0;
+    background-color: var(--transparentblack);
+    border-radius: 1.5rem;
+    padding: 0 3.5rem 3rem 3.5rem;
+    transition: all ease 0.5s;
+}
+
+.box_overlay h3,
+.box_overlay p {
+    color: var(--white);
+}
+
+.box_overlay h3 {
+    font-family: 'medium';
+    font-size: 1.5rem;
+}
+
+.box_overlay p {
+    font-size: 0.9rem;
+}
+
+.calculate_btn {
+    color: var(--iconbg);
+    background-color: var(--white);
+    border: 0;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+
+.calculate_btn:hover {
+    background-color: var(--green2);
+    color: var(--white);
+}
+
+.box:hover .box_overlay {
+    bottom: 0;
 }
 
 .grid_container {
