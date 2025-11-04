@@ -28,14 +28,39 @@ function toggleHamburgerMenu() {
 
 document.addEventListener('DOMContentLoaded', toggleHamburgerMenu);
 
-function toggleMobileDropdown(e) {
-    e.preventDefault();
-    var menu = document.getElementById('mobile-products-menu');
-    if (menu.classList.contains('opacity-0')) {
-        menu.classList.remove('opacity-0', 'invisible');
-        menu.classList.add('opacity-100', 'visible', 'top-[100%]');
-    } else {
-        menu.classList.remove('opacity-100', 'visible', 'top-[100%]');
-        menu.classList.add('opacity-0', 'invisible');
-    }
+function videoLoadOnObserve(){
+    document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll('.video_section video[data-src]');
+        videos.forEach(video => {
+          const src = video.getAttribute('data-src');
+          if (!src) return;
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                if (!video.src) {
+                  video.src = src;
+                }
+                video.play();
+                obs.unobserve(video);
+              }
+            });
+          }, {threshold: 0.4});
+          observer.observe(video);
+        });
+      });
+
 }
+videoLoadOnObserve()
+
+function swiperSlider(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        speed: 1200,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
+swiperSlider();
