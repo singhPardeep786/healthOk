@@ -254,6 +254,58 @@ main {
 }
 
 
+
+.contact_banner_bg {
+    width: 100%;
+    height: 70vh;
+    background: url('./images/contact_banner_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact_banner_bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--transparentblack2);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contact_banner_content {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contact_banner_content h2 {
+    font-size: 4rem;
+    color: var(--white);
+    font-family: 'bold';
+    transition: all ease 0.5s;
+}
+
+.contact_banner_content h5 {
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+.contact_banner_content p {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
 /*----======== BANNER END =========----*/
 
 .about_wrapper {
