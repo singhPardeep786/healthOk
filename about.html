@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <div class="logo">
                 <img src="./images/logo.png" class="w-100 " alt="logo">
             </div>
@@ -36,7 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link links active_link" aria-current="page" href="#">Home</a>
+                <a class="nav-link links" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link links ms-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,7 +63,7 @@
                 <a href="#" class="nav-link links ms-lg-2">meal plan</a>
               </li>
               <li class="nav-item">
-                <a href="about.html" class="nav-link links ms-lg-2">about us</a>
+                <a href="#" class="nav-link links ms-lg-2 active_link">about us</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link links ms-lg-2">contact us</a>
@@ -78,34 +78,74 @@
 
     <!--============BANNER START==========--->
 
-    <div class="container-fluid px-0 overflow-hidden banner_bg">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 align-items-center">
-            <div class="col h-100">
-                <div class="left_banner_img">
-                    <img src="./images/banner_left_img.png" class="w-100 h-100" alt="banner image 1">
+    <div class="container-fluid px-0 overflow-hidden about_banner_bg" style="z-index: -1;">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
+            <div class="col">
+                <div class="about_banner_content text-center">
+                    <h2>The Brand</h2>
+                    <p class="mt-3">The journey of becoming India’s most trusted multivitamin brand</p>
                 </div>
             </div>
-            <div class="col h-100 mt-2 mt-lg-0">
-                <div class="right_banner_img">
-                    <div class="mankind_logo d-flex justify-content-end align-items-center px-4">
-                        <img src="./images/mankind_logo.png" alt="mankind logo">
-                    </div>
-                    <div class="right_banner_content mt-3">
-                        <img src="./images/banner_right_content.png" alt="banner content">
+
+        </div>
+    </div>
+    <div class="about_banner_overlap_content mx-auto">
+        <div class="about_banner_content2 text-center">
+            <p>With life becoming fast-paced, taking care of mental and physical health has never been more important. As routines shift and eating habits change, the impact that diet and food have on overall well-being has become more obvious.</p>
+            <p class="mb-0">Mankind Pharma has developed HealthOK Multivitamin Tablets & Gummies to fill the daily gap in vitamins, minerals and nutrients with a smart formulation to keep you energised, stress-resilient and at your best day-to-day.</p>
+        </div>
+    </div>
+
+    <!-- <div class="container z-5">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
+            <div class="col">
+                <div class="about_banner_overlap_content">
+
+                    <div class="about_banner_content2 text-center">
+                        <p>With life becoming fast-paced, taking care of mental and physical health has never been more important. As routines shift and eating habits change, the impact that diet and food have on overall well-being has become more obvious.</p>
+                        <p class="mb-0">Mankind Pharma has developed HealthOK Multivitamin Tablets & Gummies to fill the daily gap in vitamins, minerals and nutrients with a smart formulation to keep you energised, stress-resilient and at your best day-to-day.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <!--============BANNER END==========--->
 
     <!--============SECTION SECOND START==========--->
 
-    <section>
+    <!-- <section class="about_wrapper mt-5">
       <div class="container-fluid px-0 overflow-hidden">
-        <div class="video_section">
-          <video muted loop preload="none" data-src="./videos/2.mp4"></video>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 align-items-center light_blue2">
+          <div class="col p-lg-0 p-md-0">
+            <div class="about_left_img w-100 h-100">
+              <img src="./images/about_img2.jpg" class="w-100 h-100 object-fit-cover" alt="">
+            </div>
+          </div>
+          <div class="col p-lg-0 p-md-0">
+            <div class="about_right_content w-100 h-100">
+              <h5>ABOUT</h5>
+              <h2><span>MANKIND</span> pharma LTD.</h2>
+              <p class="mt-4">Mankind Pharma was founded in 1995. It has transformed into one of India’s most respected pharmaceutical companies, with strong representation in over 34 international markets. With the support of our dedicated team of over 22,000 employees, we have been able to manage ourselves through innovation, research, and world-class manufacturing.
+                Today, Mankind Pharma is one of the top providers of prescription and OTC products in India, with a portfolio of trusted brands across multiple segments, including healthcare, wellness, and consumer products.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="about_wrapper mt-5">
+      <div class="about_second_section">
+        <div class="about_left_img w-100 h-100">
+          <img src="./images/about_img2.jpg" class="w-100 h-100 object-fit-cover" alt="">
+        </div>
+        <div class="about_right_content w-100 h-100">
+          <h5>ABOUT</h5>
+          <h2><span>MANKIND</span> pharma LTD.</h2>
+          <p class="mt-4">Mankind Pharma was founded in 1995. It has transformed into one of India’s most respected pharmaceutical companies, with strong representation in over 34 international markets. With the support of our dedicated team of over 22,000 employees, we have been able to manage ourselves through innovation, research, and world-class manufacturing.
+            Today, Mankind Pharma is one of the top providers of prescription and OTC products in India, with a portfolio of trusted brands across multiple segments, including healthcare, wellness, and consumer products.
+            </p>
         </div>
       </div>
     </section>
@@ -116,9 +156,7 @@
 
     <section>
       <div class="container-fluid px-0 overflow-hidden">
-        <div class="video_section">
-          <video muted loop preload="none" data-src="./videos/3.mp4"></video>
-        </div>
+        
       </div>
     </section>
     
@@ -130,55 +168,11 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
-              <h5>SOCIAL</h5>
-              <h2>Where Wellness Meets Energy</h2>
-              <p>Good health doesn’t have to be boring. HealthOK makes everyday wellness easy, fun, and energising. Explore our community!</p>
-            </div>
+            
           </div>
 
           <div class="col mt-5">
-            <div class="swiper mySwiper swiper_padding">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide rounded-5">
-                  <div class="slider_video">
-                     <video muted loop preload="none" data-src="./videos/snapinsta1.mp4"></video>
-                  </div>
-                </div>
-                <div class="swiper-slide rounded-5">
-                  <div class="slider_video">
-                     <video muted loop preload="none" data-src="./videos/snapinsta2.mp4"></video>
-                  </div>
-                </div>
-                <div class="swiper-slide rounded-5">
-                  <div class="slider_video">
-                     <video muted loop preload="none" data-src="./videos/snapinsta3.mp4"></video>
-                  </div>
-                </div>
-                <div class="swiper-slide rounded-5">
-                  <div class="slider_video">
-                     <video muted loop preload="none" data-src="./videos/snapinsta1.mp4"></video>
-                  </div>
-                </div>
-                <div class="swiper-slide rounded-5">
-                  <div class="slider_video">
-                     <video muted loop preload="none" data-src="./videos/snapinsta2.mp4"></video>
-                  </div>
-                </div>
-              </div>
-              <div class="slider_navigation">
-                <div class="swiper-button-next">
-                  <span class="right_icon">
-                    <img src="./images/arrow_icon.png" alt="">
-                  </span>
-                </div>
-                <div class="swiper-button-prev">
-                  <span class="left_icon">
-                    <img src="./images/arrow_icon.png" alt="">
-                  </span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -191,71 +185,7 @@
     <section>
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-          <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
-              <h5>CALCULATE</h5>
-              <h2>Fuel your mornings the right way!</h2>
-              <p>Before you grab your coffee or multivitamin tablets,  take a minute to know what your body needs.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
-          <div class="col text-center mt-5">
-            <div class="box">
-              <img src="./images/box_img1.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            </div>
-          </div>
-          <div class="col text-center mt-5">
-            <div class="box">
-              <img src="./images/box_img2.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            </div>
-          </div>
-          <div class="col text-center mt-5">
-            <div class="box">
-              <img src="./images/box_img3.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            </div>
-          </div>
-        </div> -->
-
-        <div class="grid_container">
-          <div class="box position-relative">
-            <img src="./images/box_img1.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            <div class="box_overlay position-absolute">
-              <h3>Basal Metabolic Rate (BMR)</h3>
-              <p>Energy is a source of life and your body consumes energy even when you’re resting! How do you know how much energy you consume when you’re at rest?</p>
-              <a href="#">
-                <button class="calculate_btn">Calculate</button>
-              </a>
-            </div>
-          </div>
-          <div class="box position-relative">
-            <img src="./images/box_img2.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            <div class="box_overlay position-absolute">
-              <h3>Body Mass Index</h3>
-              <p>Having the ideal body weight ensures you enjoy a good quality of life. But how do you know if your current body weight is ideal for you?</p>
-              <a href="#">
-                <button class="calculate_btn">Calculate</button>
-              </a>
-            </div>
-          </div>
-          <div class="box position-relative">
-            <img src="./images/box_img3.jpg" class="w-100 h-100 object-fit-cover" alt="">
-            <div class="box_overlay position-absolute">
-              <h3>Calorie Intake</h3>
-              <p>Tracking calorie intake helps maintain a healthy weight and energy balance. But how do you determine your daily calorie needs?</p>
-              <a href="#">
-                <button class="calculate_btn">Calculate</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-          <div class="col text-center my-5">
-            <a href="#">
-              <button class="know_more_btn rounded-pill">Know More</button>
-            </a>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -267,37 +197,11 @@
 
     <section>
       <div class="container-fluid px-0 overflow-hidden">
-        <div class="healthok_banner">
-          <div class="health_box d-flex flex-column gap-3">
-            <h3>HealthOK <br> Multivitamin Tablets</h3>
-            <p>Life moves fast, but your health shouldn’t fall behind. That’s why our multivitamin tablets pack 19+ vitamins, minerals, vitamin C, D and Zinc to improve health and immunity.</p>
-            <a href="#">
-              <button class="buy_now border-0">Buy Now</button>
-            </a>
-          </div>
-        </div>
+        
       </div>
     </section>
     
     <!--============SECTION HEALTHOK MULTIVITAMINS END==========--->
-
-    <!--============SECTION HEALTHOK GUMMIES START==========--->
-
-    <section>
-      <div class="container-fluid px-0 overflow-hidden">
-        <div class="healthok_gummies">
-          <div class="gummies_box d-flex flex-column gap-3">
-            <h3>HealthOK Gummiess</h3>
-            <p>Healthy habits can be fun too! Chewy, colourful, and packed with iodine, zinc, and essential vitamins. Multivitamin gummies for immunity and healthy growth.</p>
-            <a href="#">
-              <button class="buy_now2 border-0">Buy Now</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!--============SECTION HEALTHOK GUMMIES END==========--->
 
 
     <!--============SECTION BRANDS START==========--->

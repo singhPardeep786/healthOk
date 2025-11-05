@@ -15,6 +15,21 @@
     src: url(./fonts/Exo2-Bold.woff2);
 }
 
+/*---====ROBOTO FONT=====-----*/
+
+@font-face {
+    font-family: 'roboto_regular';
+    src: url(./fonts/Roboto-Regular.woff2);
+}
+@font-face {
+    font-family: 'roboto_medium';
+    src: url(./fonts/Roboto-Medium.woff2);
+}
+@font-face {
+    font-family: 'roboto_light';
+    src: url(./fonts/Roboto-Light.woff2);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -30,21 +45,30 @@ html,body {
 
 :root {
     --blue: #3254BA;
+    --darkblue: #26237A;
     --iconbg: #1E1E65;
     --black: #303030;
-    --transparentblack: #303030a4;
     --white: #F8FCFE;
+    --orange: #E06D02;
     --lightgreen: #E6FFF2;
     --green: #0A8044;
     --green2: #39C874;
+    --green3: #34BA61;
     --darkgreen: #032011;
     --lightblue: #BFE4F7;
+    --lightblue2: #ECFAFF;
+    --transparentblack: #303030a4;
+    --transparentblack2: #00000083;
     --gradientbtn: linear-gradient(to right, #39C874, #0E844A);
     --gradientbtn2: linear-gradient(to right, #FF9C40, #FF7300);
 }
 
 a {
     text-decoration: none!important;
+}
+
+.light_blue2 {
+    background-color: var(--lightblue2);
 }
 
 .regular {
@@ -171,8 +195,73 @@ main {
     width: 90%;
 }
 
+
+.about_banner_bg {
+    width: 100%;
+    height: 75vh;
+    background: url('./images/about_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.about_banner_bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--transparentblack2);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.about_banner_content {
+    width: 100%;
+}
+
+.about_banner_content h2 {
+    font-size: 3.8rem;
+    color: var(--white);
+    font-family: 'semibold';
+    transition: all ease 0.5s;
+}
+
+.about_banner_content p {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.about_banner_overlap_content {
+    width: 85%!important;
+    background-color: var(--orange);
+    border-radius: 2rem;
+    padding: 4.5rem 2rem;
+    margin: -9rem 0 0 0;
+}
+
+.about_banner_overlap_content p {
+    font-family: 'roboto_light';
+    font-size: 2.6rem;
+    color: var(--white);
+    line-height: 3.3rem;
+}
+
+
 /*----======== BANNER END =========----*/
 
+.about_wrapper {
+    width: 85%!important;
+    margin: 0 auto;
+    /* border-radius: 2.5rem; */
+    overflow: hidden;
+}
 
 /*----========SECTION SECOND START =========----*/
 
@@ -186,13 +275,56 @@ main {
     object-fit: cover;
 }
 
+.about_right_content {
+    padding: 3rem;
+}
+
+.about_right_content h5 {
+    letter-spacing: 0.5rem;
+
+    font-family: 'roboto_regular';
+}
+
+.about_right_content h2 {
+    color: var(--darkblue);
+    font-family: 'semibold';
+    font-size: 3rem;
+}
+
+.about_right_content h2 span {
+    color: var(--green3);
+    font-family: 'bold';
+}
+
+.about_right_content p {
+    font-family: 'roboto_light';
+    color: var(--black);
+    /* color: #202024; */
+    font-size: 1.5rem;
+}
+
+
+.about_second_section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    background-color: var(--lightblue2);
+}
+
+@media (max-width: 991.98px) {
+    .about_second_section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /*----========SECTION SECOND END =========----*/
 
 
 /*----========SECTION SOCIAL START =========----*/
 
 .social_heading_box {
-    width: 38%;
+    width: 40%;
 }
 
 .social_heading_box h5 {
@@ -203,7 +335,7 @@ main {
 
 .social_heading_box h2 {
     font-family: 'semibold';
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .swiper {
