@@ -780,7 +780,7 @@ form-group1 select {
     width: 200%;
     height: 500%;
     background-color: var(--white);
-    /* border-radius: 50%; */
+    border-radius: 50%;
     left: -50%;
     bottom: -500%;
     transition: all ease 0.5s;
@@ -1081,7 +1081,7 @@ form-group1 select {
 
 /*----========SECTION CALCULATE START =========----*/
 
-.box {
+/* .box {
     width: 100%;
     height: 550px;
     border-radius: 1.5rem;
@@ -1177,7 +1177,7 @@ form-group1 select {
 
 .know_more_btn:hover::after {
     bottom: -180%;
-}
+} */
 
 /*----========SECTION CALCULATE END =========----*/
 
