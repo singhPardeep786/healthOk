@@ -168,7 +168,7 @@ main {
 
 .banner_bg {
     width: 100%;
-    height: 90vh;
+    height: 90vh!important;
     background: linear-gradient(to right, var(--white), var(--lightblue));
     margin-top: 4rem;
 }
@@ -195,10 +195,12 @@ main {
 
 .right_banner_img {
     width: 100%;
+    height: 90vh;
+    gap: 3rem;
 }
 
 .right_banner_content img {
-    width: 90%;
+    width: 80%;
 }
 
 
@@ -1564,8 +1566,8 @@ form-group1 select {
 } */
 
 
-@media (min-width: 786px) {
+@media (min-width: 786px) and (max-width: 1400px){
     .banner_bg {
-        height: 100%;
+        height: 100%!important;
     }
 }
