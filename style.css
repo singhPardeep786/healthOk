@@ -49,6 +49,7 @@ html,body {
     --iconbg: #1E1E65;
     --black: #303030;
     --white: #F8FCFE;
+    --contactwhite: #F1F1E6;
     --orange: #E06D02;
     --lightgreen: #E6FFF2;
     --green: #0A8044;
@@ -59,6 +60,7 @@ html,body {
     --lightblue2: #ECFAFF;
     --transparentblack: #303030a4;
     --transparentblack2: #00000083;
+    --transparentblack3: #0000008f;
     --gradientbtn: linear-gradient(to right, #39C874, #0E844A);
     --gradientbtn2: linear-gradient(to right, #FF9C40, #FF7300);
 }
@@ -257,7 +259,7 @@ main {
 
 .contact_banner_bg {
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     background: url('./images/contact_banner_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -274,7 +276,7 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--transparentblack2);
+    background-color: var(--transparentblack3);
     top: 0;
     left: 0;
     z-index: -1;
@@ -287,19 +289,19 @@ main {
 
 .contact_banner_content h2 {
     font-size: 4rem;
-    color: var(--white);
+    color: var(--contactwhite);
     font-family: 'bold';
     transition: all ease 0.5s;
 }
 
 .contact_banner_content h5 {
     font-size: 1.7rem;
-    color: var(--white);
+    color: var(--contactwhite);
     margin-top: 2rem;
 }
 
 .contact_banner_content p {
-    color: var(--white);
+    color: var(--contactwhite);
     font-weight: 400;
     font-size: 1.2rem;
 }
@@ -368,6 +370,172 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+.location_details {
+    width: 100%;
+}
+
+.location_details h4 {
+    color: var(--green3);
+    font-family: 'semibold';
+}
+
+.address {
+    width: 100%;
+}
+
+
+/*---====CONTACT FORM START====---*/
+
+.form-container {
+    max-width: 80%;
+    margin-left:  auto;
+    border-radius: 8px;
+}
+
+.form-group1 {
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 11px;
+    color: #999;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 16px 16px 16px 48px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--iconbg);
+}
+
+.phone-wrapper {
+    display: flex;
+    gap: 0;
+}
+
+.country-code {
+    width: 6.34rem;
+    padding: 16px 12px;
+    border: 2px solid #d1d5db;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 15px;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+}
+
+.phone-input {
+    flex: 1;
+    border-radius: 0 8px 8px 0 !important;
+    padding-left: 16px !important;
+}
+
+textarea {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--iconbg);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 16px;
+}
+
+.submit-btn:hover {
+    background: var(--darkblue);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 48px;
+}
+
+/* Icon styles using Unicode symbols */
+.icon-user::before {
+    content: '';
+    font-style: normal;
+}
+
+.icon-document::before {
+    content: '';
+    font-style: normal;
+}
+
+.icon-message::before {
+    content: '';
+    font-style: normal;
+}
+
+.error_message {
+    display: none;
+    color: rgb(245, 26, 26);
+    font-size: 0.8rem;
+}
+
+/*---====CONTACT FORM END====---*/
 
 
 /*----========SECTION SECOND END =========----*/
