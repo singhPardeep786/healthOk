@@ -1401,9 +1401,9 @@ form-group1 select {
 
 /*----======== RESPONSIVE CODES =========----*/
 
-@media (min-width: 300px) and (max-width: 767px){
+@media (min-width: 300px) and (max-width: 453px){
     .banner_bg {
-        height: 100%;
+        height: 100%!important;
     }
 
     .mankind_logo img {
@@ -1427,13 +1427,15 @@ form-group1 select {
     }
 
     .healthok_banner {
-        background-image: url('./images/banner_adapts5.png');
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
     
     .healthok_gummies {
-        background-image: url('./images/banner_adapts4.png');
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
 
     .health_box,
@@ -1452,7 +1454,12 @@ form-group1 select {
     }
 }
 
-@media (min-width: 453px) and (max-width: 767px){
+@media (min-width: 453px) and (max-width: 600px){
+
+    .banner_bg {
+        height: 100%!important;
+    }
+    
     .social_heading_box {
         width: 80%;
     }
@@ -1470,13 +1477,55 @@ form-group1 select {
     }
 
     .healthok_banner {
-        background-image: url('./images/banner_adapts5.png');
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
     
     .healthok_gummies {
-        background-image: url('./images/banner_adapts4.png');
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
+    }
+
+    .health_box,
+    .gummies_box {
+        width: 50%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 767px){
+
+    .banner_bg {
+        height: 100%!important;
+    }
+    
+    .social_heading_box {
+        width: 80%;
+    }
+
+    .social_heading_box h2 {
+        font-size: 2.5rem;
+    }
+
+    .social_heading_box p {
+        font-size: 0.95rem;
+    }
+
+    .box {
+        height: 500px;
+    }
+
+    .healthok_banner {
+        background-image: none;
+        padding: 0;
+        height: 100%;
+    }
+    
+    .healthok_gummies {
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
 
     .health_box,
@@ -1486,6 +1535,10 @@ form-group1 select {
 }
 
 @media (min-width: 768px) and (max-width: 992px){
+
+    .banner_bg {
+        height: 100%!important;
+    }
     
     .social_heading_box {
         width: 60%;
@@ -1504,13 +1557,15 @@ form-group1 select {
     }
 
     .healthok_banner {
-        /* background-image: url('./images/banner_adapts5.png'); */
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
     
     .healthok_gummies {
-        /* background-image: url('./images/banner_adapts4.png'); */
-        padding: 1rem;
+        background-image: none;
+        padding: 0;
+        height: 100%;
     }
 
     .health_box,
