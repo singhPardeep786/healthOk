@@ -1422,9 +1422,19 @@ form-group1 select {
         height: 500px;
     }
 
+    .healthok_banner {
+        background-image: url('./images/banner_adapts5.png');
+        padding: 1rem;
+    }
+    
+    .healthok_gummies {
+        background-image: url('./images/banner_adapts4.png');
+        padding: 1rem;
+    }
+
     .health_box,
     .gummies_box {
-        width: 70%;
+        width: 80%;
     }
 
     .health_box h3,
@@ -1454,6 +1464,21 @@ form-group1 select {
     .box {
         height: 500px;
     }
+
+    .healthok_banner {
+        background-image: url('./images/banner_adapts5.png');
+        padding: 1rem;
+    }
+    
+    .healthok_gummies {
+        background-image: url('./images/banner_adapts4.png');
+        padding: 1rem;
+    }
+
+    .health_box,
+    .gummies_box {
+        width: 50%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px){
@@ -1473,9 +1498,19 @@ form-group1 select {
         height: 500px;
     }
 
+    .healthok_banner {
+        /* background-image: url('./images/banner_adapts5.png'); */
+        padding: 1rem;
+    }
+    
+    .healthok_gummies {
+        /* background-image: url('./images/banner_adapts4.png'); */
+        padding: 1rem;
+    }
+
     .health_box,
     .gummies_box {
-        width: 60%;
+        width: 50%;
     }
 }
 
