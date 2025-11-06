@@ -426,12 +426,16 @@ textarea,
 select {
     width: 100%;
     padding: 16px 16px 16px 48px;
-    border: 2px solid #d1d5db;
+    border: 2px solid var(--transparentblack);
     border-radius: 8px;
     font-size: 15px;
     color: #333;
     transition: border-color 0.2s;
     font-family: inherit;
+}
+
+select {
+    border-right: var(--green);
 }
 
 input::placeholder,
@@ -454,7 +458,7 @@ select:focus {
 .country-code {
     width: 6.34rem;
     padding: 16px 12px;
-    border: 2px solid #d1d5db;
+    border: 2px solid var(--transparentblack);
     border-right: none;
     border-radius: 8px 0 0 8px;
     font-size: 15px;
