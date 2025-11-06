@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthOK - Blogs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!---BOOTSTRAP CSS--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <main>
+
+      
+    
+    <!--============ NAVBAR START==========--->
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <div class="logo">
+                <img src="./images/logo.png" class="w-100 " alt="logo">
+            </div>
+          </a>
+          <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler_bars_icon">
+                <span class="bar1" id="bar1"></span>
+                <span class="bar2" id="bar2"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link links" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link links ms-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu shadow-lg border-0">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span><img src="./images/product1.png" alt="product1"></span> <span>healthok multivitamins tablets</span>
+                    </a>
+                  </li>
+                  <hr class="my-2" style="color: gray; opacity: 0.2;" />
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span><img src="./images/product2.png" alt="product2"></span> <span>healthok multivitamins tablets</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link links ms-lg-2">Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link links ms-lg-2">meal plan</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link links ms-lg-2">about us</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link links ms-lg-2">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <!--============ NAVBAR END==========--->
+
+
+    <!--============BANNER START==========--->
+
+    <div class="container-fluid px-0 overflow-hidden blog_banner_bg">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
+            <div class="col">
+                <div class="blog_banner_content text-center">
+                    <h2>Our Blogs</h2>
+                    <p>Explore expert advice, practical guides, and insights on health, nutrition, fitness, and wellness. From the advantages of multivitamin tablets to the benefits of immunity booster gummies, our blogs are designed to help you make informed choices for a healthier life.</p>
+                    <div class="search-container mt-4">
+                      <div class="search-wrapper">
+                          <!-- <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <path d="m21 21-4.35-4.35"></path>
+                          </svg> -->
+                          <img src="./images/icons/search.png" class="" alt="">
+                          <input type="text" class="search-input" placeholder="Search">
+                      </div>
+                      <button class="tags-button">
+                          Tags
+                          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                      </button>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--============BANNER END==========--->
+
+    <!--============SECTION SECOND START==========--->
+
+    <section class="mt-4">
+        <div class="container">
+            <div class="select_options_btn d-flex justify-content-end">
+              <div class="custom-select-wrapper" style="position: relative; display: inline-block;">
+                <select name="blog_filter" class="blog_filter" id="blog_filter" style="appearance:none; -webkit-appearance:none; -moz-appearance:none; padding-right: 2.5rem;">
+                  <option value="newest">Newest</option>
+                  <option value="oldest">OLD</option>
+                </select>
+                <span class="select-arrow" style="position:absolute;top:50%;right:1rem;pointer-events:none;transform:translateY(-50%);">
+                  <img src="./images/icons/down_angle.png" alt="">
+                </span>
+              </div>
+            </div>
+
+            <div class="blog_container">
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="blogs d-flex flex-column">
+                <div class="blog_img overflow-hidden">
+                  <img src="./images/blog_img.png" class="w-100" alt="">
+                </div>
+                <div class="blog_content">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="blog_profile_img">
+                      <img src="./images/blog_profile.png" alt="">
+                    </div>
+                    <p class="mb-0">Ysabel Garcia</p>
+                  </div>
+
+                  <h3>The Complete Guide to Real Estate Referral Fees for 2025 </h3>
+                  <p>Let's remove some of the mystery around real estate referrals and the associated fees. We’ll review why referrals happen, explore how agreements work and offer you a template to get started.</p>
+
+                  <div class="d-inline-block">
+                    <a href="#" class="d-flex align-items-center gap-2 read_more_btn">
+                      <span>Read More</span>
+                      <img src="./images/icons/green_arrow.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="#" class="w-fit">
+                <button class="load_more">Load More</button>
+              </a>
+            </div>
+        </div>
+    </section>
+    
+    <!--============SECTION SECOND END==========--->
+
+
+    <!--============SECTION BRANDS START==========--->
+
+    <section class="mt-5">
+      <div class="container-fluid px-0 overflow-hidden bg-white">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
+          <div class="col text-center mt-5">
+            <div class="social_heading_box mx-auto">
+              <h5>MEET OUR FAMILY</h5>
+              <h2>Other Brands</h2>
+              <p>Together we make and help Mankind.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="logos_main_div">
+              <div class="logo_reel_animation">
+                <div class="slide">
+                  <img src="./images/gasofast.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/epic.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/manforce.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/prega_news.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/rapid_news.png" class="w-100 h-100" alt="">
+                </div>
+              </div>
+              <div aria-hidden class="logo_reel_animation">
+                <div class="slide">
+                  <img src="./images/gasofast.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/epic.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/manforce.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/prega_news.png" class="w-100 h-100" alt="">
+                </div>
+                <div class="slide">
+                  <img src="./images/rapid_news.png" class="w-100 h-100" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--============SECTION BRANDS END==========--->
+
+
+    <!--============FOOTER START=============--->
+
+    <footer>
+      <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
+        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
+
+        </div> -->
+        <div class="container">
+          <div class="footer">
+            <div class="footer_box1">
+              <div class="footer_box1_content">
+                <div class="footer_logo">
+                  <img src="./images/footer_logo.png" class="w-100" alt="footer logo">
+                </div>
+                <h3 class="mt-4">Promote your wellness <br> with a pill and some pop!</h3>
+              </div>
+            </div>
+            <div class="footer_box2">
+              <div class="footer_box2_content">
+                <h3>COMPANY</h3>
+                <ul class="list-unstyled mt-4">
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Lifestyle Guide</a>
+                  </li>
+                  <li>
+                    <a href="#">Products</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_box2_content">
+                <h3>QUICK LINKS</h3>
+                <ul class="list-unstyled mt-4">
+                  <li>
+                    <a href="#" class="active_link2 fw-semibold">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ’s</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_box2_content">
+                <h3>CONNECT WITH US</h3>
+                <div class="footer_icons">
+                  <a href="#">
+                    <iconify-icon icon="hugeicons:instagram" class="icon p-0"></iconify-icon>
+                  </a>
+                  <a href="#">
+                    <iconify-icon icon="iconoir:facebook" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                  </a>
+                  <a href="#">
+                    <iconify-icon icon="pajamas:twitter" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                  </a>
+                  <a href="#">
+                    <iconify-icon icon="si:youtube-line" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="color: var(--white); opacity: 0.3; margin-top: 2rem;">
+          
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col"></div>
+            <div class="col text-center">
+              <p class="copyright">© 2024 Healthok Private Limited. All rights reserved. </p>
+            </div>
+            <div class="col text-lg-end text-md-end text-center">
+              <a href="#" class="privacy_policy">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </footer>
+    
+    <!--============FOOTER END==========--->
+  </main>
+
+  <!--=====================JAVASCRIPTS---STARTS==================--->
+
+   <!---BOOTSTRAP JS--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script src="./script.js"></script>
+
+    <script src="./formValidation.js"></script>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
