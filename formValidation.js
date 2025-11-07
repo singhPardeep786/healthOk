@@ -11,14 +11,17 @@ function formValidation(){
     const phoneError = errorMessages[1];
     const careerError = errorMessages[2];
     const messageError = errorMessages[3];
+
+    const responseMsg = document.querySelector(".responseMsg");
     
     form.addEventListener('submit', (e)=>{
       e.preventDefault();
   
       let isValid = true;
   
-      // Reset all error messages
+      // Reset all messages
       errorMessages.forEach(error => error.style.display = "none");
+      responseMsg.style.display = "none";
   
       // fullName validation
       if(fullName.value.trim().length < 2){
@@ -55,7 +58,13 @@ function formValidation(){
       // Only reset form if validation passes
       if(isValid){
         form.reset();
-        alert("Form submitted successfully!");
+        responseMsg.style.display = "initial";
+        responseMsg.style.right = 0;
+        responseMsg.style.opacity = 1;
+        setTimeout(()=>{
+          responseMsg.style.right = "-100%";
+          responseMsg.style.opacity = 0;
+        }, 3000)
       }
     });
 }

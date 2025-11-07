@@ -686,6 +686,23 @@ form-group1 select {
     font-size: 0.8rem;
 }
 
+.responseMsg {
+    width: fit-content;
+    background-color: var(--green);
+    color: var(--white);
+    /* font-family: 'semibold'; */
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 13%;
+    right: -100%;
+    transform: translateY(-13%);
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+
 /*---====CONTACT FORM END====---*/
 
 
