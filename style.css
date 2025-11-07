@@ -112,6 +112,7 @@ main {
 
 .links {
     font-weight: 400;
+    width: fit-content;
     font-size: 1rem!important;
     position: relative;
     overflow: hidden;
@@ -1491,6 +1492,62 @@ form-group1 select {
     .gummies_box p {
         font-size: 0.9rem;
     }
+
+    .about_banner_content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about_banner_content h2 {
+        font-size: 2.8rem;
+    }
+
+    .about_banner_content p {
+        font-size: 1.1rem;
+    }
+
+    .about_banner_overlap_content p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+
+    .contact_banner_content h2 {
+        font-size: 3rem;
+    }
+
+    .contact_banner_content h5 {
+        font-size: 1.2rem;
+    }
+
+    .contact_banner_content p {
+        font-size: 1rem;
+    }
+
+    .blog_banner_content {
+        width: 90%;
+    }
+
+    .blog_banner_content h2 {
+        font-size: 3rem;
+    }
+
+    .blog_banner_content p {
+        font-size: 1rem;
+    }
+
+    .search-container {
+        gap: 1rem;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .tags-button {
+        width: fit-content;
+    }
+
+    .form-container {
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 453px) and (max-width: 600px){
@@ -1531,6 +1588,45 @@ form-group1 select {
     .gummies_box {
         width: 50%;
     }
+
+    .about_banner_content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about_banner_overlap_content p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+
+    .contact_banner_content h2 {
+        font-size: 3rem;
+    }
+
+    .contact_banner_content h5 {
+        font-size: 1.2rem;
+    }
+
+    .contact_banner_content p {
+        font-size: 1rem;
+    }
+
+    .blog_banner_content {
+        width: 90%;
+    }
+
+    .blog_banner_content h2 {
+        font-size: 3rem;
+    }
+
+    .blog_banner_content p {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        margin: 0 auto;
+    }
+    
 }
 
 @media (min-width: 601px) and (max-width: 767px){
@@ -1570,6 +1666,15 @@ form-group1 select {
     .health_box,
     .gummies_box {
         width: 50%;
+    }
+
+    .about_banner_overlap_content p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+
+    .form-container {
+        margin: 0 auto;
     }
 }
 
@@ -1611,6 +1716,15 @@ form-group1 select {
     .gummies_box {
         width: 50%;
     }
+
+    .about_banner_overlap_content p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+
+    .form-container {
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 993px) and (max-width: 1220px){
@@ -1638,6 +1752,11 @@ form-group1 select {
     .health_box,
     .gummies_box {
         width: 60%;
+    }
+
+    .about_banner_overlap_content p {
+        font-size: 2rem;
+        line-height: 2.3rem;
     }
 }
 
