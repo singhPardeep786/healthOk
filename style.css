@@ -111,9 +111,30 @@ main {
 }
 
 .links {
-    text-transform: capitalize;
     font-weight: 400;
     font-size: 1rem!important;
+    position: relative;
+    overflow: hidden;
+    color: var(--black)!important;
+}
+
+.links::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 80%;
+    background: linear-gradient(to right, var(--white), var(--lightblue));
+    bottom: 10%;
+    border-radius: 1rem;
+    left: 0;
+    opacity: 0;
+    transition: all ease 0.5s;
+    z-index: -1;
+}
+
+.links:hover::before{
+    width: 100%;
+    opacity: 1;
 }
 
 .active_link {
