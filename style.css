@@ -115,6 +115,7 @@ main {
     font-size: 1rem!important;
     position: relative;
     overflow: hidden;
+    text-transform: capitalize!important;
     color: var(--black)!important;
 }
 
