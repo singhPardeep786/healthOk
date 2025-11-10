@@ -109,3 +109,34 @@ function swiperSlider(){
 }
 swiperSlider();
 
+function gummiesSwiperSlider(){
+    var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        speed: 1000,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+        }
+      });
+}
+gummiesSwiperSlider();
+
