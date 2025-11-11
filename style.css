@@ -1912,6 +1912,10 @@ form-group1 select {
         margin: 0 auto;
     }
 
+    .logos_main_div {
+        gap: 2rem;
+    }
+
     .gummies_banner_bg,
     .second_section_bg {
         height: 100%;
@@ -1996,6 +2000,10 @@ form-group1 select {
         margin: 0 auto;
     }
 
+    .logos_main_div {
+        gap: 2rem;
+    }
+
     .gummies_banner_bg,
     .second_section_bg {
         height: 100%;
@@ -2050,6 +2058,10 @@ form-group1 select {
 
     .form-container {
         margin: 0 auto;
+    }
+
+    .logos_main_div {
+        gap: 3rem;
     }
 
     .gummies_banner_bg,
