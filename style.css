@@ -1415,14 +1415,14 @@ form-group1 select {
 } */
 
 
-.third_section_bg {
+/* .third_section_bg {
     width: 100%;
     height: 100dvh;
     background-image: url('./images/gummies_page_images/section-third.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-}
+} */
 
 .fourth_section_bg {
     width: 100%;
@@ -1541,8 +1541,9 @@ form-group1 select {
     }
     .gummies_slide_box {
         width: 80%;
-        min-height: 500px;
+        min-height: fit-content;
         gap: 1.5rem;
+        padding: 3rem 1rem;
     }
     .gummies_slider_img1 {
         width: 60%;
@@ -1567,7 +1568,7 @@ form-group1 select {
     }
     .gummies_slide_box {
         width: 100%;
-        min-height: 500px;
+        min-height: fit-content;
         gap: 1rem;
         border-radius: 1rem;
     }
@@ -1600,10 +1601,10 @@ form-group1 select {
     }
     .gummies_slide_box {
         width: 99%;
-        min-height: 120px;
+        min-height: fit-content;
         gap: 0.5rem;
         border-radius: 0.7rem;
-        padding: 1rem 0.3rem;
+        padding: 2rem 1.3rem;
     }
     .gummies_slider_nav {
         width: 100%;
