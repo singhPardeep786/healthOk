@@ -13,6 +13,9 @@
     <!---BOOTSTRAP CSS--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!----DATA AOS CSS---->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body style="background-color: #F4F5F6;">
 
@@ -83,7 +86,7 @@
     <div class="container-fluid px-0 overflow-hidden about_banner_bg" style="z-index: -1;">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
             <div class="col">
-                <div class="about_banner_content text-center">
+                <div class="about_banner_content text-center" data-aos="zoom-in">
                     <h2>The Brand</h2>
                     <p class="mt-3">The journey of becoming India’s most trusted multivitamin brand</p>
                 </div>
@@ -91,7 +94,7 @@
 
         </div>
     </div>
-    <div class="about_banner_overlap_content mx-auto">
+    <div class="about_banner_overlap_content mx-auto" data-aos="fade-up">
         <div class="about_banner_content2 text-center">
             <p>With life becoming fast-paced, taking care of mental and physical health has never been more important. As routines shift and eating habits change, the impact that diet and food have on overall well-being has become more obvious.</p>
             <p class="mb-0">Mankind Pharma has developed HealthOK Multivitamin Tablets & Gummies to fill the daily gap in vitamins, minerals and nutrients with a smart formulation to keep you energised, stress-resilient and at your best day-to-day.</p>
@@ -138,11 +141,11 @@
     </section> -->
 
     <section class="about_wrapper mt-5">
-      <div class="about_second_section">
-        <div class="about_left_img w-100 h-100">
+      <div class="about_second_section" data-aos="fade-up">
+        <div class="about_left_img w-100 h-100" data-aos="fade-up">
           <img src="./images/about_img2.jpg" class="w-100 h-100 object-fit-cover" alt="">
         </div>
-        <div class="about_right_content w-100 h-100">
+        <div class="about_right_content w-100 h-100" data-aos="fade-up" data-aos-delay="100">
           <h5>ABOUT</h5>
           <h2><span>MANKIND</span> pharma LTD.</h2>
           <p class="mt-4">Mankind Pharma was founded in 1995. It has transformed into one of India’s most respected pharmaceutical companies, with strong representation in over 34 international markets. With the support of our dedicated team of over 22,000 employees, we have been able to manage ourselves through innovation, research, and world-class manufacturing.
@@ -159,7 +162,7 @@
     <section>
       <div class="container-fluid px-0 overflow-hidden">
         <div class="about_numbers">
-          <div class="number" style="grid-area: first;">
+          <div class="number" style="grid-area: first;" data-aos="fade-up">
             <h2>34</h2>
             <div class="text_and_icon">
               <div class="number_icon">
@@ -168,7 +171,7 @@
               <h3>Markets</h3>
             </div>
           </div>
-          <div class="number" style="grid-area: second;">
+          <div class="number" style="grid-area: second;" data-aos="fade-up" data-aos-delay="100">
             <h2>22K</h2>
             <div class="text_and_icon">
               <div class="number_icon">
@@ -177,7 +180,7 @@
               <h3>Happy Employees</h3>
             </div>
           </div>
-          <div class="number" style="grid-area: third;">
+          <div class="number" style="grid-area: third;" data-aos="fade-up" data-aos-delay="150">
             <h2>50K</h2>
             <div class="text_and_icon">
               <div class="number_icon">
@@ -199,14 +202,14 @@
       <div class="container-fluid px-0 overflow-hidden bg-white">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
+            <div class="social_heading_box mx-auto" data-aos="fade-up">
               <h5>MEET OUR FAMILY</h5>
               <h2>Other Brands</h2>
               <p>Together we make and help Mankind.</p>
             </div>
           </div>
           <div class="col">
-            <div class="logos_main_div">
+            <div class="logos_main_div" data-aos="fade-up">
               <div class="logo_reel_animation">
                 <div class="slide">
                   <img src="./images/gasofast.png" class="w-100 h-100" alt="">
@@ -254,9 +257,6 @@
 
     <footer>
       <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
-        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-
-        </div> -->
         <div class="container">
           <div class="footer">
             <div class="footer_box1">
@@ -335,7 +335,7 @@
           </div>
           <hr style="color: var(--white); opacity: 0.3; margin-top: 2rem;">
           
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 mb-5 mb-lg-0">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3">
             <div class="col"></div>
             <div class="col text-center">
               <p class="copyright">© 2024 Healthok Private Limited. All rights reserved. </p>
@@ -366,6 +366,42 @@
         const lenis = new Lenis({
           autoRaf: true,
         });
+    </script>
+
+    <!----DATA AOS JS----->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof AOS !== "undefined" && AOS.init) {
+          AOS.init({
+            offset: 120,
+            duration: 1200,
+            once: false, // Animation triggers every time you scroll to section
+            mirror: true // Animation triggers on scroll up as well
+          });
+
+          // Ensure AOS refreshes when lazy-loaded images/videos appear
+          let refreshAOS = function() { AOS.refreshHard(); };
+
+          // Observe all sections with data-aos
+          if ('IntersectionObserver' in window) {
+            const aosSections = document.querySelectorAll('[data-aos]');
+            let observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  setTimeout(refreshAOS, 10);
+                }
+              });
+            }, { threshold: 0.15 });
+            aosSections.forEach(function(section) {
+              observer.observe(section);
+            });
+          } else {
+            // Fallback to periodic refresh
+            // setInterval(refreshAOS, 1000);
+          }
+        }
+      });
     </script>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
