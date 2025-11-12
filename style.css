@@ -997,15 +997,15 @@ form-group1 select {
 
 @media (max-width: 575.98px) {
     .about_numbers {
-        margin-top: 1rem;
+        margin-top: 2rem;
         gap: 0.75rem;
         padding-left: 0;
     }
     .number h2 {
-        font-size: 1.15rem;
+        font-size: 3.15rem;
     }
     .text_and_icon h3 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
     .number_icon {
         width: 18%;
@@ -1879,6 +1879,19 @@ form-group1 select {
         line-height: 2.3rem;
     }
 
+    .about_right_content {
+        padding: 2rem;
+    }
+
+    .about_right_content h2 {
+        font-size: 2.2rem;
+        line-height: 0.95;
+    }
+
+    .about_right_content p {
+        font-size: 1.1rem;
+    }
+
     .contact_banner_content h2 {
         font-size: 3rem;
     }
@@ -2006,6 +2019,19 @@ form-group1 select {
         line-height: 2.3rem;
     }
 
+    .about_right_content {
+        padding: 2rem;
+    }
+
+    .about_right_content h2 {
+        font-size: 2.1rem;
+        line-height: 0.95;
+    }
+
+    .about_right_content p {
+        font-size: 1.1rem;
+    }
+
     .contact_banner_content h2 {
         font-size: 3rem;
     }
@@ -2073,6 +2099,17 @@ form-group1 select {
         width: 50%; 
     }
     
+}
+
+@media (min-width: 601px) and (max-width: 767px){
+
+    .about_right_content {
+        padding: 2rem;
+    }
+    
+    .about_right_content h2 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 767px){
