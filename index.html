@@ -15,6 +15,10 @@
 
     <!---SWIPER CSS--->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!----DATA AOS CSS---->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -147,7 +151,7 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
+            <div class="social_heading_box mx-auto" data-aos="fade-up">
               <h5>SOCIAL</h5>
               <h2>Where Wellness Meets Energy</h2>
               <p>Good health doesn’t have to be boring. HealthOK makes everyday wellness easy, fun, and energising. Explore our community!</p>
@@ -267,18 +271,20 @@
     <section>
       <div class="container-fluid px-0 overflow-hidden mt-4">
         <div class="d-none d-lg-block">
-          <div class="healthok_banner">
-            <div class="health_box d-flex flex-column gap-1 gap-lg-3">
-              <h3>HealthOK <br> Multivitamin Tablets</h3>
-              <p>Life moves fast, but your health shouldn’t fall behind. That’s why our multivitamin tablets pack 19+ vitamins, minerals, vitamin C, D and Zinc to improve health and immunity.</p>
-              <a href="#">
-                <button class="buy_now border-0">Buy Now</button>
-              </a>
+          <div data-aos="fade-up">
+            <div class="healthok_banner">
+              <div class="health_box d-flex flex-column gap-1 gap-lg-3" data-aos="fade-up">
+                <h3>HealthOK <br> Multivitamin Tablets</h3>
+                <p>Life moves fast, but your health shouldn’t fall behind. That’s why our multivitamin tablets pack 19+ vitamins, minerals, vitamin C, D and Zinc to improve health and immunity.</p>
+                <a href="#">
+                  <button class="buy_now border-0">Buy Now</button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <div class="d-block d-lg-none">
-            <img src="./images/banner_adapts4.jpeg" class="w-100 h-100" alt="">
+            <img src="./images/banner_adapts4.jpeg" class="w-100 h-100" alt="" data-aos="fade-up">
         </div>
       </div>
     </section>
@@ -289,19 +295,21 @@
 
     <section>
       <div class="container-fluid px-0 overflow-hidden">
-        <div class="healthok_gummies">
-          <div class="d-none d-lg-block">
-            <div class="gummies_box d-flex flex-column gap-1 gap-lg-3">
-              <h3>HealthOK Gummiess</h3>
-              <p>Healthy habits can be fun too! Chewy, colourful, and packed with iodine, zinc, and essential vitamins. Multivitamin gummies for immunity and healthy growth.</p>
-              <a href="#">
-                <button class="buy_now2 border-0">Buy Now</button>
-              </a>
+        <div data-aos="fade-up">
+          <div class="healthok_gummies">
+            <div class="d-none d-lg-block">
+              <div class="gummies_box d-flex flex-column gap-1 gap-lg-3" data-aos="fade-up">
+                <h3>HealthOK Gummiess</h3>
+                <p>Healthy habits can be fun too! Chewy, colourful, and packed with iodine, zinc, and essential vitamins. Multivitamin gummies for immunity and healthy growth.</p>
+                <a href="#">
+                  <button class="buy_now2 border-0">Buy Now</button>
+                </a>
+              </div>
             </div>
+            <div class="d-block d-lg-none">
+              <img src="./images/banner_adapts5.jpeg" class="w-100 h-100" alt="">
           </div>
-          <div class="d-block d-lg-none">
-            <img src="./images/banner_adapts5.jpeg" class="w-100 h-100" alt="">
-        </div>
+          </div>
         </div>
       </div>
     </section>
@@ -315,14 +323,14 @@
       <div class="container-fluid px-0 overflow-hidden">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
+            <div class="social_heading_box mx-auto" data-aos="fade-up">
               <h5>MEET OUR FAMILY</h5>
               <h2>Other Brands</h2>
               <p>Together we make and help Mankind.</p>
             </div>
           </div>
           <div class="col">
-            <div class="logos_main_div">
+            <div class="logos_main_div" data-aos="fade-up">
               <div class="logo_reel_animation">
                 <div class="slide">
                   <img src="./images/gasofast.png" class="w-100 h-100" alt="">
@@ -370,9 +378,6 @@
 
     <footer>
       <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
-        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-
-        </div> -->
         <div class="container">
           <div class="footer">
             <div class="footer_box1">
@@ -476,6 +481,42 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script src="./script.js"></script>
+
+    <!----DATA AOS JS----->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof AOS !== "undefined" && AOS.init) {
+          AOS.init({
+            offset: 120,
+            duration: 1200,
+            once: false, // Animation triggers every time you scroll to section
+            mirror: true // Animation triggers on scroll up as well
+          });
+
+          // Ensure AOS refreshes when lazy-loaded images/videos appear
+          let refreshAOS = function() { AOS.refreshHard(); };
+
+          // Observe all sections with data-aos
+          if ('IntersectionObserver' in window) {
+            const aosSections = document.querySelectorAll('[data-aos]');
+            let observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  setTimeout(refreshAOS, 10);
+                }
+              });
+            }, { threshold: 0.15 });
+            aosSections.forEach(function(section) {
+              observer.observe(section);
+            });
+          } else {
+            // Fallback to periodic refresh
+            // setInterval(refreshAOS, 1000);
+          }
+        }
+      });
+    </script>
 
     <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script> 
     <script>
