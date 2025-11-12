@@ -316,8 +316,6 @@ a {
     line-height: 3.3rem;
 }
 
-
-
 .contact_banner_bg {
     width: 100%;
     height: 65vh;
@@ -1430,14 +1428,14 @@ form-group1 select {
     background-size: 100% 100%;
 } */
 
-.fourth_section_bg {
+/* .fourth_section_bg {
     width: 100%;
     height: 100%;
     background-image: url('./images/gummies_page_images/section-fourth.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-}
+} */
 
 /* .fifth_section_bg {
     width: 100%;
