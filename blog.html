@@ -13,6 +13,9 @@
     <!---BOOTSTRAP CSS--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!----DATA AOS CSS---->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -83,7 +86,7 @@
     <div class="container-fluid px-0 overflow-hidden blog_banner_bg">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
             <div class="col">
-                <div class="blog_banner_content text-center">
+                <div class="blog_banner_content text-center" data-aos="zoom-in">
                     <h2>Our Blogs</h2>
                     <p>Explore expert advice, practical guides, and insights on health, nutrition, fitness, and wellness. From the advantages of multivitamin tablets to the benefits of immunity booster gummies, our blogs are designed to help you make informed choices for a healthier life.</p>
                     <div class="search-container mt-4">
@@ -126,7 +129,7 @@
     <section class="mt-4">
         <div class="container">
             <div class="select_options_btn d-flex justify-content-end">
-              <div class="custom-select-wrapper" style="position: relative; display: inline-block;">
+              <div class="custom-select-wrapper" style="position: relative; display: inline-block;" data-aos="fade-up">
                 <select name="blog_filter" class="blog_filter" id="blog_filter" style="appearance:none; -webkit-appearance:none; -moz-appearance:none; padding-right: 2.5rem;">
                   <option value="newest">Newest</option>
                   <option value="oldest">OLD</option>
@@ -138,7 +141,7 @@
             </div>
 
             <div class="blog_container">
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="150">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -161,7 +164,7 @@
                   </div>
                 </div>
               </div>
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="250">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -184,7 +187,7 @@
                   </div>
                 </div>
               </div>
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="350">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -207,7 +210,7 @@
                   </div>
                 </div>
               </div>
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="150">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -230,7 +233,7 @@
                   </div>
                 </div>
               </div>
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="250">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -253,7 +256,7 @@
                   </div>
                 </div>
               </div>
-              <div class="blogs d-flex flex-column">
+              <div class="blogs d-flex flex-column" data-aos="fade-up" data-aos-delay="350">
                 <div class="blog_img overflow-hidden">
                   <img src="./images/blog_img.png" class="w-100" alt="">
                 </div>
@@ -277,7 +280,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-center">
+            <div class="text-center" data-aos="zoom-in">
               <a href="#" class="w-fit">
                 <button class="load_more">Load More</button>
               </a>
@@ -294,14 +297,14 @@
       <div class="container-fluid px-0 overflow-hidden bg-white">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
+            <div class="social_heading_box mx-auto" data-aos="fade-up">
               <h5>MEET OUR FAMILY</h5>
               <h2>Other Brands</h2>
               <p>Together we make and help Mankind.</p>
             </div>
           </div>
           <div class="col">
-            <div class="logos_main_div">
+            <div class="logos_main_div" data-aos="fade-up">
               <div class="logo_reel_animation">
                 <div class="slide">
                   <img src="./images/gasofast.png" class="w-100 h-100" alt="">
@@ -349,9 +352,6 @@
 
     <footer>
       <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
-        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-
-        </div> -->
         <div class="container">
           <div class="footer">
             <div class="footer_box1">
@@ -460,6 +460,42 @@
         const lenis = new Lenis({
           autoRaf: true,
         });
+    </script>
+
+    <!----DATA AOS JS----->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof AOS !== "undefined" && AOS.init) {
+          AOS.init({
+            offset: 120,
+            duration: 1200,
+            once: false, // Animation triggers every time you scroll to section
+            mirror: true // Animation triggers on scroll up as well
+          });
+
+          // Ensure AOS refreshes when lazy-loaded images/videos appear
+          let refreshAOS = function() { AOS.refreshHard(); };
+
+          // Observe all sections with data-aos
+          if ('IntersectionObserver' in window) {
+            const aosSections = document.querySelectorAll('[data-aos]');
+            let observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  setTimeout(refreshAOS, 10);
+                }
+              });
+            }, { threshold: 0.15 });
+            aosSections.forEach(function(section) {
+              observer.observe(section);
+            });
+          } else {
+            // Fallback to periodic refresh
+            // setInterval(refreshAOS, 1000);
+          }
+        }
+      });
     </script>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
