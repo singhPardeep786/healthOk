@@ -747,9 +747,9 @@ form-group1 select {
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     position: absolute;
-    bottom: 13%;
+    bottom: 8%;
     right: -100%;
-    transform: translateY(-13%);
+    transform: translateY(-8%);
     opacity: 0;
     transition: all ease 0.5s;
 }
