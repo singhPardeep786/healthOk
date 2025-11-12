@@ -13,6 +13,9 @@
     <!---BOOTSTRAP CSS--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!----DATA AOS CSS---->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -83,7 +86,7 @@
     <div class="container-fluid px-0 overflow-hidden contact_banner_bg">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
             <div class="col">
-                <div class="contact_banner_content text-center">
+                <div class="contact_banner_content text-center" data-aos="zoom-in">
                     <h2>Get in Touch</h2>
                     <h5>We are here to help you!</h5>
                     <p class="mt-3">We are dedicated to providing you with the best experience possible. We will contact you within 24-hours, if urgent assistance is needed kindly contact us at +91 1146846700. We look forward to serving you!</p>
@@ -101,10 +104,10 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                 <div class="col">
-                  <div class="location_map">
+                  <div class="location_map" data-aos="fade-up">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d391.3069903352007!2d77.26875837939583!3d28.547449011274555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e8d730b18b%3A0x76b2c7c2b635fa39!2sMankind%20Pharma%20Limited!5e0!3m2!1sen!2sin!4v1762405738684!5m2!1sen!2sin" width="100%" height="565" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
-                  <div class="location_details mt-4">
+                  <div class="location_details mt-4" data-aos="fade-up">
                     <h4>Mankind Pharma</h4>
                     <div class="address mt-4">
                       <div class="office_address d-flex gap-2">
@@ -149,7 +152,7 @@
                 </div>
 
                 <div class="col">
-                  <div class="form-container position-relative overflow-hidden">
+                  <div class="form-container position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <form id="contactForm">
                         <div class="form-group1">
                             <label for="fullName">Full Name*</label>
@@ -380,14 +383,14 @@
       <div class="container-fluid px-0 overflow-hidden bg-white">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
           <div class="col text-center mt-5">
-            <div class="social_heading_box mx-auto">
+            <div class="social_heading_box mx-auto" data-aos="fade-up">
               <h5>MEET OUR FAMILY</h5>
               <h2>Other Brands</h2>
               <p>Together we make and help Mankind.</p>
             </div>
           </div>
           <div class="col">
-            <div class="logos_main_div">
+            <div class="logos_main_div" data-aos="fade-up">
               <div class="logo_reel_animation">
                 <div class="slide">
                   <img src="./images/gasofast.png" class="w-100 h-100" alt="">
@@ -435,9 +438,6 @@
 
     <footer>
       <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
-        <!-- <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
-
-        </div> -->
         <div class="container">
           <div class="footer">
             <div class="footer_box1">
@@ -515,7 +515,7 @@
           </div>
           <hr style="color: var(--white); opacity: 0.3; margin-top: 2rem;">
           
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 mb-5 mb-lg-0">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3">
             <div class="col"></div>
             <div class="col text-center">
               <p class="copyright">© 2024 Healthok Private Limited. All rights reserved. </p>
@@ -548,6 +548,42 @@
         const lenis = new Lenis({
           autoRaf: true,
         });
+    </script>
+
+    <!----DATA AOS JS----->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof AOS !== "undefined" && AOS.init) {
+          AOS.init({
+            offset: 120,
+            duration: 1200,
+            once: false, // Animation triggers every time you scroll to section
+            mirror: true // Animation triggers on scroll up as well
+          });
+
+          // Ensure AOS refreshes when lazy-loaded images/videos appear
+          let refreshAOS = function() { AOS.refreshHard(); };
+
+          // Observe all sections with data-aos
+          if ('IntersectionObserver' in window) {
+            const aosSections = document.querySelectorAll('[data-aos]');
+            let observer = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  setTimeout(refreshAOS, 10);
+                }
+              });
+            }, { threshold: 0.15 });
+            aosSections.forEach(function(section) {
+              observer.observe(section);
+            });
+          } else {
+            // Fallback to periodic refresh
+            // setInterval(refreshAOS, 1000);
+          }
+        }
+      });
     </script>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
