@@ -2066,6 +2066,12 @@ form-group1 select {
         font-size: 1rem;
     }
 
+    .search-container {
+        gap: 1rem;
+        flex-direction: column;
+        width: fit-content;
+    }
+
     .form-container {
         margin: 0 auto;
     }
