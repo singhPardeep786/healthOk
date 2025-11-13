@@ -1874,6 +1874,11 @@ form-group1 select {
         font-size: 1.1rem;
     }
 
+    .about_banner_overlap_content {
+        width: 89%!important;
+        padding: 2rem 1.5rem;
+    }
+
     .about_banner_overlap_content p {
         font-size: 1.6rem;
         line-height: 2.3rem;
@@ -2012,6 +2017,11 @@ form-group1 select {
     .about_banner_content {
         width: 80%;
         margin: 0 auto;
+    }
+
+    .about_banner_overlap_content {
+        width: 89%!important;
+        padding: 2.5rem 1.5rem;
     }
 
     .about_banner_overlap_content p {
@@ -2191,7 +2201,7 @@ form-group1 select {
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 767px) and (max-width: 992px){
 
     .banner_bg {
         height: 100%!important;
