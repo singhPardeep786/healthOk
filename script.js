@@ -140,3 +140,23 @@ function gummiesSwiperSlider(){
 }
 gummiesSwiperSlider();
 
+function toggleCategoryDropdown() {
+  const dropdown = document.getElementById('categoryDropdownMenu');
+  const expanded = document.getElementById('categoryDropdown').getAttribute('aria-expanded') === "true";
+  if (!expanded) {
+    dropdown.style.display = "block";
+    document.getElementById('categoryDropdown').setAttribute('aria-expanded', 'true');
+  } else {
+    dropdown.style.display = "none";
+    document.getElementById('categoryDropdown').setAttribute('aria-expanded', 'false');
+  }
+}
+// Hide dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const button = document.getElementById('categoryDropdown');
+  const dropdown = document.getElementById('categoryDropdownMenu');
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = "none";
+    button.setAttribute('aria-expanded', 'false');
+  }
+});
