@@ -216,12 +216,12 @@ a {
 
 .banner_bg {
     width: 100%;
-    height: 90vh!important;
+    height: 100%!important;
     /* background: linear-gradient(to right, var(--white), var(--lightblue)); */
-    background-image: url('./images/home_banner_bg.png');
-    background-size: 100% 100%;
+    /* background-image: url('./images/home_banner_bg.png');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     margin-top: 4rem;
 }
 
