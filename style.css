@@ -289,6 +289,7 @@ a {
     top: 3%;
     right: 3%;
     transform: translate(-3%, -3%);
+    transition: all ease 0.5s;
 }
 
 .about_banner_content {
@@ -1819,6 +1820,13 @@ form-group1 select {
         width: 35%;
     }
 
+    .mankind_banner_logo {
+        width: 30%;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -3%);
+    }
+
     .social_heading_box {
         width: 100%;
     }
@@ -1981,6 +1989,13 @@ form-group1 select {
     .banner_bg {
         height: 100%!important;
     }
+
+    .mankind_banner_logo {
+        width: 25%;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -3%);
+    }
     
     .social_heading_box {
         width: 80%;
@@ -2134,6 +2149,13 @@ form-group1 select {
     .banner_bg {
         height: 100%!important;
     }
+
+    .mankind_banner_logo {
+        width: 20%;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -3%);
+    }
     
     .social_heading_box {
         width: 80%;
@@ -2212,6 +2234,13 @@ form-group1 select {
 
     .banner_bg {
         height: 100%!important;
+    }
+
+    .mankind_banner_logo {
+        width: 15%;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -3%);
     }
     
     .social_heading_box {
