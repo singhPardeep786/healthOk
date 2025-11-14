@@ -959,9 +959,6 @@ form-group1 select {
     .text_and_icon h3 {
         font-size: 1.5rem;
     }
-    .number_icon {
-        width: 13%;
-    }
 }
 
 @media (max-width: 767.98px) {
@@ -991,10 +988,6 @@ form-group1 select {
     .text_and_icon h3 {
         font-size: 1.5rem;
     }
-    .number_icon {
-        width: 15%;
-        min-width: 28px;
-    }
 }
 
 @media (max-width: 575.98px) {
@@ -1008,10 +1001,6 @@ form-group1 select {
     }
     .text_and_icon h3 {
         font-size: 1.2rem;
-    }
-    .number_icon {
-        width: 18%;
-        min-width: 22px;
     }
 }
 
