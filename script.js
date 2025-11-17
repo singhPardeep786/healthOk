@@ -123,10 +123,6 @@ function gummiesSwiperSlider(){
                 slidesPerView: 1,
                 spaceBetween: 0,
             },
-            480: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            },
             768: {
                 slidesPerView: 1,
                 spaceBetween: 0,
