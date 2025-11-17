@@ -1338,12 +1338,12 @@ form-group1 select {
 
 .gummies_banner_bg {
     width: 100%;
-    height: 100dvh;
+    /* height: 100dvh; */
     margin-top: 3.5rem;
-    background-image: url('./images/gummies_page_images/gummies_banner_bg.png');
+    /* background-image: url('./images/gummies_page_images/gummies_banner_bg.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
 }
 
 .gummies_banner_content {
