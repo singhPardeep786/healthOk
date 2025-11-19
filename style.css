@@ -1571,8 +1571,9 @@ form-group1 select {
         margin-top: 2rem;
     }
     .gummies_slide_box {
-        width: 100%;
+        width: 70%;
         min-height: fit-content;
+        margin: 0 auto;
         gap: 1rem;
         border-radius: 1rem;
     }
@@ -1604,8 +1605,9 @@ form-group1 select {
         min-height: 190px;
     }
     .gummies_slide_box {
-        width: 99%;
+        width: 70%;
         min-height: fit-content;
+        margin: 0 auto;
         gap: 0.5rem;
         border-radius: 0.7rem;
         padding: 2rem 1.3rem;
