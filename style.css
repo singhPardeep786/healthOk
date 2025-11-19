@@ -1424,14 +1424,36 @@ form-group1 select {
     background-size: 100% 100%;
 } */
 
-/* .fourth_section_bg {
+.fourth_section_bg {
     width: 100%;
-    height: 100%;
-    background-image: url('./images/gummies_page_images/section-fourth.png');
+    height: 88vh;
+    background-image: url('./images/gummies_page_images/jelly_section_bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-} */
+}
+
+.jelly_content {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+}
+
+.jelly_heading_img {
+    width: 35%;
+}
+
+.jelly_center_img {
+    width: 70%;
+}
+
+.jelly_bottom_img {
+    width: 43%;
+}
 
 /* .fifth_section_bg {
     width: 100%;
@@ -1540,6 +1562,10 @@ form-group1 select {
 }
 
 @media (max-width: 992px) {
+    .fourth_section_bg {
+        height: 100%;
+        background: none;
+    }
     .sixth_section_bg {
         height: 100%;
         background-size: cover;
