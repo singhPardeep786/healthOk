@@ -1299,7 +1299,7 @@ form-group1 select {
     transition: all ease 0.5s;
 }
 
-/* .healthok_gummies {
+.healthok_gummies {
     width: 100%;
     height: 95vh;
     display: flex;
@@ -1309,7 +1309,7 @@ form-group1 select {
     background-size: cover;
     background-position: bottom center;
     padding: 0 5rem;
-} */
+}
 
 .gummies_box {
     width: 35%;
@@ -1472,7 +1472,7 @@ form-group1 select {
 
 .gummies_slide_box {
     width: 100%;
-    min-height: 650px;
+    min-height: 550px;
     padding: 1.5rem;
     margin: 0 auto;
     background-color: var(--lightgreen2);
