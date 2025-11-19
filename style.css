@@ -1294,7 +1294,12 @@ form-group1 select {
 
 /*----========SECTION HEALTHOK GUMMIES START =========----*/
 
-.healthok_gummies {
+.gummies_logo {
+    width: 80%;
+    transition: all ease 0.5s;
+}
+
+/* .healthok_gummies {
     width: 100%;
     height: 95vh;
     display: flex;
@@ -1304,7 +1309,7 @@ form-group1 select {
     background-size: cover;
     background-position: bottom center;
     padding: 0 5rem;
-}
+} */
 
 .gummies_box {
     width: 35%;
@@ -1339,7 +1344,7 @@ form-group1 select {
 .gummies_banner_bg {
     width: 100%;
     /* height: 100dvh; */
-    margin-top: 5.5rem;
+    margin-top: 4.5rem;
     /* background-image: url('./images/gummies_page_images/gummies_banner_bg.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -1562,6 +1567,9 @@ form-group1 select {
 }
 
 @media (max-width: 768px) {
+    .gummies_logo {
+        width: 70%;
+    }
     .sixth_section_bg {
         height: 100%;
         background-size: cover;
@@ -1590,6 +1598,9 @@ form-group1 select {
 }
 
 @media (max-width: 480px) {
+    .gummies_logo {
+        width: 70%;
+    }
     .sixth_section_bg {
         height: auto;
         min-height: 420px;
@@ -1849,11 +1860,11 @@ form-group1 select {
         height: 100%;
     }
     
-    .healthok_gummies {
+    /* .healthok_gummies {
         background-image: none;
         padding: 0;
         height: 100%;
-    }
+    } */
 
     .health_box,
     .gummies_box {
@@ -2019,11 +2030,11 @@ form-group1 select {
         height: 100%;
     }
     
-    .healthok_gummies {
+    /* .healthok_gummies {
         background-image: none;
         padding: 0;
         height: 100%;
-    }
+    } */
 
     .health_box,
     .gummies_box {
@@ -2179,11 +2190,11 @@ form-group1 select {
         height: 100%;
     }
     
-    .healthok_gummies {
+    /* .healthok_gummies {
         background-image: none;
         padding: 0;
         height: 100%;
-    }
+    } */
 
     .health_box,
     .gummies_box {
@@ -2265,11 +2276,11 @@ form-group1 select {
         height: 100%;
     }
     
-    .healthok_gummies {
+    /* .healthok_gummies {
         background-image: none;
         padding: 0;
         height: 100%;
-    }
+    } */
 
     .health_box,
     .gummies_box {
