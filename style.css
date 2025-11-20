@@ -767,6 +767,19 @@ form-group1 select {
 
 /*---====BLOGS SECTION SECOND START====---*/
 
+select {
+    cursor: pointer;
+}
+
+.category-filter-dropdown select option {
+    background-color: var(--white)!important;
+}
+
+.category-filter-dropdown select:focus {
+    border: none!important;
+    box-shadow: none!important;
+}
+
 .blog_container {
     width: 100%;
     display: grid;
