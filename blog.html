@@ -99,24 +99,25 @@
                           <input type="text" class="search-input" placeholder="Search">
                       </div>
                       <div class="category-filter-dropdown position-relative d-inline-block">
-                        <button class="tags-button d-flex align-items-center" type="button" id="categoryDropdown" aria-expanded="false" onclick="toggleCategoryDropdown()">
-                            Categories
-                            <svg class="chevron ms-1" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                                <polyline points="6 9 12 15 18 9"></polyline>
+                        <div class="custom-select-wrapper" style="position: relative; display: inline-block; min-width: 180px;">
+                          <select 
+                            class="form-select category-select"
+                            style="background: #676768; color: var(--white); border-radius: 24px; border: none; padding: 0.5rem 2.5rem 0.5rem 1.2rem; font-size: 1.05rem; font-weight: 500; min-width: 180px; width: 100%; appearance:none; -webkit-appearance:none; -moz-appearance:none;"
+                          >
+                            <option value="all">All Categories</option>
+                            <option value="nutrition">Nutrition</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="wellness">Wellness</option>
+                            <option value="supplements">Supplements</option>
+                            <option value="immunity">Immunity</option>
+                            <!-- Add additional categories as needed -->
+                          </select>
+                          <span class="select-arrow" style="position:absolute;top:50%;right:1rem;pointer-events:none;transform:translateY(-50%);">
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                              <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
-                        </button>
-                        <ul class="dropdown-menu shadow border-0 position-absolute"
-                            id="categoryDropdownMenu"
-                            aria-labelledby="categoryDropdown"
-                            style="min-width: 180px; z-index: 999; top: 100%; left: 0; display: none;">
-                          <li><a class="dropdown-item" href="#">All</a></li>
-                          <li><a class="dropdown-item" href="#">Nutrition</a></li>
-                          <li><a class="dropdown-item" href="#">Fitness</a></li>
-                          <li><a class="dropdown-item" href="#">Wellness</a></li>
-                          <li><a class="dropdown-item" href="#">Supplements</a></li>
-                          <li><a class="dropdown-item" href="#">Immunity</a></li>
-                          <!-- Add additional categories as needed -->
-                        </ul>
+                          </span>
+                        </div>
                       </div>
                   </div>
                 </div>
