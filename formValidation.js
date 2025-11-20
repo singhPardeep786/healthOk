@@ -77,9 +77,6 @@ function formValidation(){
             // This case should not happen anymore, but keep for safety
             phoneError.style.display = "initial";
             phoneError.textContent = "Phone number cannot exceed 15 digits";
-        } else if (val.length > 0 && val.length < 10) {
-            phoneError.style.display = "initial";
-            phoneError.textContent = "Phone number must be at least 10 digits";
         } else {
             phoneError.style.display = "none";
             phoneError.textContent = "";
