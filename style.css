@@ -627,7 +627,7 @@ label {
 }
 
 .form-group1 input[type="text"],
-.form-group1 input[type="tel"],
+.form-group1 input[type="number"],
 .form-group1 textarea,
 form-group1 select {
     width: 100%;
