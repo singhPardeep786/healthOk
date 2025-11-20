@@ -437,7 +437,7 @@
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 mb-5 mb-lg-0">
             <div class="col"></div>
             <div class="col text-center">
-              <p class="copyright">© 2024 Healthok Private Limited. All rights reserved. </p>
+              <p class="copyright">© <span id="year"></span> Healthok Private Limited. All rights reserved. </p>
             </div>
             <div class="col text-lg-end text-center">
               <a href="#" class="privacy_policy">Privacy Policy</a>
@@ -501,6 +501,12 @@
           }
         }
       });
+    </script>
+
+    <script>
+      const year = document.querySelector("#year");
+      year.textContent = new Date().getFullYear();
+      year.style.color = "var(--white)"
     </script>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
