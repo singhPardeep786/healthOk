@@ -116,6 +116,9 @@
               <div class="col h-100">
                   <div class="mob_banner_img">
                       <img src="./images/banner_adapts1.png" class="w-100 h-100" alt="banner mobile image">
+
+                      <!-- image link works only on live website -->
+                      <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/home_banner_mobile.svg -->
                   </div>
               </div>
           </div>
@@ -132,7 +135,7 @@
           <video muted loop preload="none" data-src="./videos/2.mp4"></video>
 
           <!-----VIDEO LINK WORKS ONLY ON LIVE WEBISTE------->
-          <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/section_2.mp4 -->
+          <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/land_2.mp4 -->
         </div>
         <div class="video_section d-block d-lg-none">
           <video muted loop preload="none" data-src="./videos/mob_video2.mp4"></video>
@@ -144,22 +147,19 @@
     </section>
     
     <!--============SECTION SECOND END==========--->
-
+    
     <!--============SECTION THIRD START==========--->
-
+    
     <section>
       <div class="container-fluid px-0 overflow-hidden">
         <div class="video_section d-none d-lg-block">
           <video muted loop preload="none" data-src="./videos/3.mp4"></video>
-            
+          
           <!-----VIDEO LINK WORKS ONLY ON LIVE WEBISTE------->
-          <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/3rd_section.mp4 -->
+          <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/home_banner3.mp4 -->
         </div>
         <div class="video_section d-block d-lg-none">
           <video muted loop preload="none" data-src="./videos/mob_video3.mp4"></video>
-            
-          <!-----VIDEO LINK WORKS ONLY ON LIVE WEBISTE------->
-          <!-- https://cdn.jsdelivr.net/gh/singhPardeep786/video/3rd_mobile_section.mp4 -->
         </div>
       </div>
     </section>
@@ -478,8 +478,8 @@
           
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 mb-5 mb-lg-0">
             <div class="col"></div>
-            <div class="col text-center">
-              <p class="copyright">© 2024 Healthok Private Limited. All rights reserved. </p>
+            <div class="col text-center"> 
+              <p class="copyright">© <span id="year"></span> Healthok Private Limited. All rights reserved. </p>
             </div>
             <div class="col text-lg-end text-center">
               <a href="#" class="privacy_policy">Privacy Policy</a>
@@ -545,6 +545,12 @@
         const lenis = new Lenis({
           autoRaf: true,
         });
+    </script>
+
+    <script>
+      const year = document.querySelector("#year");
+      year.textContent = new Date().getFullYear();
+      year.style.color = "var(--white)"
     </script>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
