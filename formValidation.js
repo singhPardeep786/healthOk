@@ -155,10 +155,12 @@ function formValidation(){
       if(isValid){
         form.reset();
         responseMsg.style.display = "initial";
-        responseMsg.style.right = 0;
+        // responseMsg.style.right = 0;
+        responseMsg.style.transform = "translateX(0)";
         responseMsg.style.opacity = 1;
         setTimeout(()=>{
-          responseMsg.style.right = "-100%";
+          // responseMsg.style.right = "-100%";
+          responseMsg.style.transform = "translateX(100%)";
           responseMsg.style.opacity = 0;
         }, 3000)
       }
