@@ -162,7 +162,7 @@ function formValidation(){
           // responseMsg.style.right = "-100%";
           responseMsg.style.transform = "translateX(100%)";
           responseMsg.style.opacity = 0;
-        }, 3000)
+        }, 5000)
       }
     });
 }
