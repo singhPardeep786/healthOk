@@ -2246,6 +2246,10 @@ select {
         background: none;
     }
 
+    .tablet_sixth_section_content h3 {
+        font-size: 1.5rem;
+    }
+
     .footer {
         flex-direction: column;
     }
@@ -2394,6 +2398,10 @@ select {
         background: none;
     }
 
+    .tablet_sixth_section_content h3 {
+        font-size: 1.5rem;
+    }
+
     .footer {
         flex-direction: column;
     }
@@ -2501,6 +2509,10 @@ select {
         background: none;
     }
 
+    .tablet_sixth_section_content h3 {
+        font-size: 2rem;
+    }
+
     .footer_box1_content h3 {
         font-size: 2rem;
     }
@@ -2581,6 +2593,10 @@ select {
 
     .tablet_routine h4 {
         font-size: 1.5rem;
+    }
+
+    .tablet_sixth_section_content h3 {
+        font-size: 2.1rem;
     }
 
     .footer_box1_content h3 {
