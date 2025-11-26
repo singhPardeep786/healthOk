@@ -2,14 +2,17 @@
     font-family: 'regular';
     src: url(./fonts/Exo2-Regular.woff2);
 }
+
 @font-face {
     font-family: 'medium';
     src: url(./fonts/Exo2-Medium.woff2);
 }
+
 @font-face {
     font-family: 'semibold';
     src: url(./fonts/Exo2-SemiBold.woff2);
 }
+
 @font-face {
     font-family: 'bold';
     src: url(./fonts/Exo2-Bold.woff2);
@@ -21,16 +24,18 @@
     font-family: 'roboto_regular';
     src: url(./fonts/Roboto-Regular.woff2);
 }
+
 @font-face {
     font-family: 'roboto_medium';
     src: url(./fonts/Roboto-Medium.woff2);
 }
+
 @font-face {
     font-family: 'roboto_light';
     src: url(./fonts/Roboto-Light.woff2);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,7 +43,8 @@
     color: var(--black);
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -67,7 +73,7 @@ html,body {
 }
 
 a {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .light_blue2 {
@@ -98,31 +104,31 @@ a {
 
 .active_link {
     width: fit-content;
-    font-size: 1rem!important;
-    text-transform: capitalize!important;
-    color: var(--black)!important;
-    background: linear-gradient(to right, var(--white), var(--lightblue))!important;
+    font-size: 1rem !important;
+    text-transform: capitalize !important;
+    color: var(--black) !important;
+    background: linear-gradient(to right, var(--white), var(--lightblue)) !important;
     border-radius: 1.5rem;
-    padding: 0.25rem 0.5rem!important;
+    padding: 0.25rem 0.5rem !important;
 }
 
 .active_link2 {
     width: fit-content;
-    font-size: 1rem!important;
-    text-transform: capitalize!important;
-    color: var(--black)!important;
-    background: linear-gradient(to right, var(--white), var(--lightblue))!important;
+    font-size: 1rem !important;
+    text-transform: capitalize !important;
+    color: var(--black) !important;
+    background: linear-gradient(to right, var(--white), var(--lightblue)) !important;
     border-radius: 1.5rem;
-    padding: 0.25rem 0.5rem!important;
+    padding: 0.25rem 0.5rem !important;
 }
 
 #product_active {
-    background-color: var(--contactwhite)!important;
-    color: var(--white)!important;
+    background-color: var(--contactwhite) !important;
+    color: var(--white) !important;
 }
 
 .dropdown-item:active {
-    background-color: var(--contactwhite)!important;
+    background-color: var(--contactwhite) !important;
 }
 
 /*----======== NAVBAR START =========----*/
@@ -138,11 +144,11 @@ a {
 .links {
     font-weight: 400;
     width: fit-content;
-    font-size: 1rem!important;
+    font-size: 1rem !important;
     position: relative;
     overflow: hidden;
-    text-transform: capitalize!important;
-    color: var(--black)!important;
+    text-transform: capitalize !important;
+    color: var(--black) !important;
 }
 
 .links::before {
@@ -159,7 +165,7 @@ a {
     z-index: -1;
 }
 
-.links:hover::before{
+.links:hover::before {
     width: 100%;
     opacity: 1;
 }
@@ -173,39 +179,39 @@ a {
 } */
 
 .dropdown-menu {
-    box-shadow: -2px 0 14px 0 rgba(50, 84, 186, 0.07), -2px 0 8px 0 rgba(0,0,0,0.07);
+    box-shadow: -2px 0 14px 0 rgba(50, 84, 186, 0.07), -2px 0 8px 0 rgba(0, 0, 0, 0.07);
 }
 
 .navbar-toggler:focus {
-    outline: none!important;
-    box-shadow: none!important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .toggler_bars_icon {
     display: inline-block;
-    width: 24px; 
-    height: 24px; 
-    position: relative; 
+    width: 24px;
+    height: 24px;
+    position: relative;
     cursor: pointer;
 }
 
 .bar1 {
-    position: absolute; 
-    top: 25%; 
-    left: 0; 
-    right: 0; 
-    height: 2px; 
-    background: #303030; 
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #303030;
     transition: transform 0.3s, top 0.3s;
 }
 
 .bar2 {
-    position: absolute; 
-    top: 65%; 
-    left: 0; 
-    right: 0; 
-    height: 2px; 
-    background: #303030; 
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #303030;
     transition: transform 0.3s, top 0.3s;
 }
 
@@ -216,7 +222,7 @@ a {
 
 .banner_bg {
     width: 100%;
-    height: 100%!important;
+    height: 100% !important;
     /* background: linear-gradient(to right, var(--white), var(--lightblue)); */
     /* background-image: url('./images/home_banner_bg.png');
     background-size: cover;
@@ -237,7 +243,7 @@ a {
 } */
 
 .mankind_logo img {
-    width: 30%!important;
+    width: 30% !important;
 }
 
 .left_banner_img {
@@ -311,7 +317,7 @@ a {
 }
 
 .about_banner_overlap_content {
-    width: 95%!important;
+    width: 95% !important;
     background-color: var(--orange);
     border-radius: 2rem;
     padding: 2.5rem 2rem;
@@ -504,7 +510,7 @@ a {
 /*----======== BANNER END =========----*/
 
 .about_wrapper {
-    width: 85%!important;
+    width: 85% !important;
     margin: 0 auto;
     /* border-radius: 2.5rem; */
     overflow: hidden;
@@ -595,7 +601,7 @@ a {
 
 .form-container {
     max-width: 80%;
-    margin-left:  auto;
+    margin-left: auto;
     border-radius: 8px;
 }
 
@@ -773,12 +779,12 @@ select {
 }
 
 .category-filter-dropdown select option {
-    background-color: var(--white)!important;
+    background-color: var(--white) !important;
 }
 
 .category-filter-dropdown select:focus {
-    border: none!important;
-    box-shadow: none!important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .blog_container {
@@ -817,7 +823,7 @@ select {
 }
 
 .blogs {
-  gap: 0.5rem;  
+    gap: 0.5rem;
 }
 
 .blog_img img {
@@ -849,7 +855,7 @@ select {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent; 
+    color: transparent;
 }
 
 .load_more {
@@ -889,6 +895,101 @@ select {
 /*---====BLOGS SECTION SECOND END====---*/
 
 
+
+.tablets_second_section {
+    width: 100%;
+    min-height: 100%;
+    background-image: url('./images/tablets_page_images/leaves.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.ingredients_box {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.ingredients_box h4 {
+    font-size: 2.7rem;
+    letter-spacing: -0.05rem;
+    font-family: 'bold';
+    color: var(--green3);
+    transition: all ease 0.5s;
+}
+
+.ingredients_box h2 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 3rem;
+    color: var(--darkblue);
+    transition: all ease 0.5s;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .tablets_second_section {
+        background-size: cover;
+    }
+
+    .ingredients_box {
+        width: 85%;
+        gap: 3.5rem;
+        align-items: center;
+    }
+
+    .ingredients_box h4 {
+        font-size: 2.1rem;
+    }
+
+    .ingredients_box h2 {
+        font-size: 3.2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tablets_second_section {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .ingredients_box {
+        width: 95%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .ingredients_box h4 {
+        font-size: 1.8rem;
+    }
+
+    .ingredients_box h2 {
+        font-size: 2.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ingredients_box {
+        width: 100%;
+        gap: 1.2rem;
+        align-items: center;
+    }
+
+    .ingredients_box h4 {
+        font-size: 1.6rem;
+    }
+
+    .ingredients_box h2 {
+        font-size: 2.5rem;
+        line-height: 1.2rem;
+    }
+}
+
 /*----========SECTION SECOND END =========----*/
 
 
@@ -898,8 +999,8 @@ select {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1.5fr 1.2fr;
-    grid-template-areas: 
-      'first second third';
+    grid-template-areas:
+        'first second third';
     margin-top: 5rem;
     gap: 1.5rem;
     padding-left: 2rem;
@@ -933,8 +1034,8 @@ select {
 }
 
 .number_icon {
-   width: 50px;
-   height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 @media (max-width: 1200px) {
@@ -946,9 +1047,11 @@ select {
         padding-left: 1rem;
         margin-top: 2.2rem;
     }
+
     .number {
         padding-left: 2rem;
     }
+
     .number h2 {
         font-size: 3.3rem;
     }
@@ -964,12 +1067,15 @@ select {
         padding-left: 0.5rem;
         margin-top: 2rem;
     }
+
     .number {
         padding-left: 1.5rem;
     }
+
     .number h2 {
         font-size: 3.2rem;
     }
+
     .text_and_icon h3 {
         font-size: 1.5rem;
     }
@@ -986,19 +1092,23 @@ select {
         padding-left: 0;
         margin-top: 1.2rem;
     }
+
     .number {
         padding-left: 2rem;
         border-left: none;
         border-top: 1px solid var(--transparentblack);
         padding-top: 1rem;
     }
+
     .number:first-child {
         border-top: none;
         padding-top: 0;
     }
+
     .number h2 {
         font-size: 3.5rem;
     }
+
     .text_and_icon h3 {
         font-size: 1.5rem;
     }
@@ -1010,12 +1120,52 @@ select {
         gap: 0.75rem;
         padding-left: 0;
     }
+
     .number h2 {
         font-size: 3.15rem;
     }
+
     .text_and_icon h3 {
         font-size: 1.2rem;
     }
+}
+
+
+.third_section_banner {
+    width: 100%;
+    height: 90vh;
+    background-image: url('./images/tablets_page_images/third_section.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third_banner_content {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.third_banner_headings h4 {
+    font-size: 2.7rem;
+}
+
+.third_banner_headings h2 {
+    font-size: 5rem;
+    line-height: 2.5rem;
+}
+
+.third_banner_headings h4,
+.third_banner_headings h2 {
+    letter-spacing: 0.1rem;
+    font-family: 'bold';
+    color: var(--white);
+}
+
+.third_banner_content img {
+    width: 20%;
 }
 
 
@@ -1042,46 +1192,49 @@ select {
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #444;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .slider_video {
+.slider_video {
     width: 100%;
     height: 600px;
     border-radius: 2rem;
     overflow: hidden;
     cursor: pointer;
     transition: all ease 0.5s;
-  }
-  
-  .slider_video video {
+}
+
+.slider_video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
     display: none;
-  }
+}
 
-  .left_icon,
-  .right_icon {
+.left_icon,
+.right_icon {
     width: 80px;
     height: 45px;
     display: flex;
@@ -1094,10 +1247,10 @@ select {
     position: relative;
     z-index: 2;
     overflow: hidden;
-  }
+}
 
-  .left_icon::after,
-  .right_icon::after {
+.left_icon::after,
+.right_icon::after {
     content: '';
     position: absolute;
     width: 200%;
@@ -1108,27 +1261,27 @@ select {
     left: -50%;
     transition: all ease 0.5s;
     z-index: -1;
-  }
+}
 
-  .left_icon:hover::after,
-  .right_icon:hover::after {
+.left_icon:hover::after,
+.right_icon:hover::after {
     bottom: -180%;
-  }
+}
 
-  .left_icon img {
+.left_icon img {
     transform: rotate(180deg);
-  }
+}
 
-  .left_icon:active,
-  .right_icon:active {
+.left_icon:active,
+.right_icon:active {
     scale: 0.9;
-  }
+}
 
-  .swiper_padding {
-    padding-bottom: 5rem!important;
-  }
-  
-  .slider_navigation {
+.swiper_padding {
+    padding-bottom: 5rem !important;
+}
+
+.slider_navigation {
     width: 5rem;
     height: 100px;
     position: absolute;
@@ -1138,21 +1291,22 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .slider_navigation .swiper-button-next, .swiper-button-prev {
-    top: 95%!important;
-  }
+}
 
-  .slider_navigation .swiper-button-prev {
-    left: 0%!important;
-    /* transform: translateX(-47%); */
-  }
+.slider_navigation .swiper-button-next,
+.swiper-button-prev {
+    top: 95% !important;
+}
 
-  .slider_navigation .swiper-button-next {
-    right: 0%!important;
+.slider_navigation .swiper-button-prev {
+    left: 0% !important;
     /* transform: translateX(-47%); */
-  }
+}
+
+.slider_navigation .swiper-button-next {
+    right: 0% !important;
+    /* transform: translateX(-47%); */
+}
 
 /*----========SECTION SOCIAL END =========----*/
 
@@ -1535,16 +1689,16 @@ select {
 .gummies_slider_nav .swiper-button-next {
     width: 5rem;
     right: 0;
-    top: 50%!important;
-    transform: translateY(-50%)!important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     transition: all ease 0.5s;
 }
 
 .gummies_slider_nav .swiper-button-prev {
     width: 5rem;
-    left: -0.2%!important;
-    top: 50%!important;
-    transform: translateY(-50%)!important;
+    left: -0.2% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     transition: all ease 0.5s;
 }
 
@@ -1559,17 +1713,21 @@ select {
         /* height: 120dvh; */
         background-size: cover;
     }
+
     .sixth_heading {
         width: 40%;
         margin-top: 5rem;
     }
+
     .gummies_slide_box {
         width: 100%;
         min-height: 500px;
     }
+
     .gummies_slider_img1 {
         width: 60%;
     }
+
     .gummies_slider_main {
         height: 100%;
     }
@@ -1580,26 +1738,32 @@ select {
         height: 100%;
         background: none;
     }
+
     .sixth_section_bg {
         height: 100%;
         background-size: cover;
     }
+
     .sixth_heading {
         width: 50%;
         margin-top: 3rem;
     }
+
     .gummies_slide_box {
         width: 80%;
         min-height: fit-content;
         gap: 1.5rem;
         padding: 3rem 1rem;
     }
+
     .gummies_slider_img1 {
         width: 60%;
     }
+
     .gummies_slider_main {
         height: 100%;
     }
+
     .gummies_slider_nav .swiper-button-next,
     .gummies_slider_nav .swiper-button-prev {
         width: 3.5rem;
@@ -1610,14 +1774,17 @@ select {
     .gummies_logo {
         width: 70%;
     }
+
     .sixth_section_bg {
         height: 100%;
         background-size: cover;
     }
+
     .sixth_heading {
         width: 70%;
         margin-top: 2rem;
     }
+
     .gummies_slide_box {
         width: 70%;
         min-height: fit-content;
@@ -1625,12 +1792,15 @@ select {
         gap: 1rem;
         border-radius: 1rem;
     }
+
     .gummies_slider_img1 {
         width: 70%;
     }
+
     .gummies_slider_main {
         height: 100%;
     }
+
     .gummies_slider_nav .swiper-button-next,
     .gummies_slider_nav .swiper-button-prev {
         width: 2.7rem;
@@ -1641,20 +1811,24 @@ select {
     .gummies_logo {
         width: 70%;
     }
+
     .sixth_section_bg {
         height: auto;
         min-height: 420px;
         background-size: cover;
         padding-bottom: 2rem;
     }
+
     .sixth_heading {
         width: 60%;
         margin-top: 1.2rem;
     }
+
     .gummies_slider_main {
         height: auto;
         min-height: 190px;
     }
+
     .gummies_slide_box {
         width: 70%;
         min-height: fit-content;
@@ -1663,9 +1837,11 @@ select {
         border-radius: 0.7rem;
         padding: 2rem 1.3rem;
     }
+
     .gummies_slider_nav {
         width: 100%;
     }
+
     .gummies_slider_nav .swiper-button-next,
     .gummies_slider_nav .swiper-button-prev {
         width: 2.1rem;
@@ -1737,6 +1913,58 @@ select {
 
 /*----========SECTION HEALTHOK GUMMIES END =========----*/
 
+
+/*----========SECTION HEALTHOK MULTIVITAMINS TABLETS START =========----*/
+
+.tablet_routine h3,
+.tablet_routine h4 {
+    color: var(--white);
+    transition: all ease 0.5s;
+}
+
+.tablet_routine h3 {
+    font-family: 'bold';
+    font-size: 3.8rem;
+}
+
+.tablet_routine h4 {
+    font-size: 2rem;
+    font-family: 'roboto_regular';
+    text-transform: capitalize;
+}
+
+.routine_box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.routine_content {
+    padding-bottom: 4rem;
+}
+
+
+.tablets_fifth_banner {
+    width: 100%;
+    height: 90vh;
+    background-image: url('./images/tablets_page_images/fifth_banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.tablet_sixth_section_content h3 {
+    font-size: 2.5rem;
+    font-family: 'bold';
+    color: var(--darkblue);
+}
+
+
+
+/*----========SECTION HEALTHOK MULTIVITAMINS TABLETS END =========----*/
+
 /*----========SECTION BRANDS START =========----*/
 
 .logos_main_div {
@@ -1760,6 +1988,7 @@ select {
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(0%);
     }
@@ -1771,7 +2000,7 @@ select {
     /* flex: 0 0 15%; */
 }
 
-.slide:nth-child(2){
+.slide:nth-child(2) {
     width: 7%;
     /* flex: 0 0 7%; */
 }
@@ -1862,9 +2091,9 @@ select {
 
 /*----======== RESPONSIVE CODES =========----*/
 
-@media (min-width: 300px) and (max-width: 453px){
+@media (min-width: 300px) and (max-width: 453px) {
     .banner_bg {
-        height: 100%!important;
+        height: 100% !important;
     }
 
     .mankind_logo img {
@@ -1899,7 +2128,7 @@ select {
         padding: 0;
         height: 100%;
     }
-    
+
     .healthok_gummies {
         background-image: none;
         padding: 0;
@@ -1935,7 +2164,7 @@ select {
     }
 
     .about_banner_overlap_content {
-        width: 89%!important;
+        width: 89% !important;
         padding: 2rem 1.5rem;
     }
 
@@ -2002,7 +2231,7 @@ select {
     .logo_reel_animation {
         gap: 3rem;
     }
-    
+
     .slide {
         width: 28%;
     }
@@ -2022,23 +2251,23 @@ select {
     }
 
     .footer_box1,
-    .footer_box2_content{
+    .footer_box2_content {
         width: 100%;
     }
 
     .footer_box1_content h3 {
         font-size: 1.8rem;
     }
-    
+
     .footer_logo {
-        width: 50%; 
+        width: 50%;
     }
 }
 
-@media (min-width: 453px) and (max-width: 600px){
+@media (min-width: 453px) and (max-width: 600px) {
 
     .banner_bg {
-        height: 100%!important;
+        height: 100% !important;
     }
 
     .mankind_banner_logo {
@@ -2047,7 +2276,7 @@ select {
         left: 50%;
         transform: translate(-50%, -3%);
     }
-    
+
     .social_heading_box {
         width: 80%;
     }
@@ -2069,7 +2298,7 @@ select {
         padding: 0;
         height: 100%;
     }
-    
+
     .healthok_gummies {
         background-image: none;
         padding: 0;
@@ -2087,7 +2316,7 @@ select {
     }
 
     .about_banner_overlap_content {
-        width: 89%!important;
+        width: 89% !important;
         padding: 2.5rem 1.5rem;
     }
 
@@ -2150,7 +2379,7 @@ select {
     .logo_reel_animation {
         gap: 3rem;
     }
-    
+
     .slide {
         width: 28%;
     }
@@ -2170,35 +2399,35 @@ select {
     }
 
     .footer_box1,
-    .footer_box2_content{
+    .footer_box2_content {
         width: 100%;
     }
 
     .footer_box1_content h3 {
         font-size: 1.8rem;
     }
-    
+
     .footer_logo {
-        width: 50%; 
+        width: 50%;
     }
-    
+
 }
 
-@media (min-width: 601px) and (max-width: 767px){
+@media (min-width: 601px) and (max-width: 767px) {
 
     .about_right_content {
         padding: 2rem;
     }
-    
+
     .about_right_content h2 {
         font-size: 2.5rem;
     }
 }
 
-@media (min-width: 601px) and (max-width: 767px){
+@media (min-width: 601px) and (max-width: 767px) {
 
     .banner_bg {
-        height: 100%!important;
+        height: 100% !important;
     }
 
     .mankind_banner_logo {
@@ -2207,7 +2436,7 @@ select {
         left: 50%;
         transform: translate(-50%, -3%);
     }
-    
+
     .social_heading_box {
         width: 80%;
     }
@@ -2229,7 +2458,7 @@ select {
         padding: 0;
         height: 100%;
     }
-    
+
     .healthok_gummies {
         background-image: none;
         padding: 0;
@@ -2257,7 +2486,7 @@ select {
     .logo_reel_animation {
         gap: 3rem;
     }
-    
+
     .slide {
         width: 25%;
     }
@@ -2275,16 +2504,16 @@ select {
     .footer_box1_content h3 {
         font-size: 2rem;
     }
-    
+
     .footer_logo {
-        width: 50%; 
+        width: 50%;
     }
 }
 
-@media (min-width: 767px) and (max-width: 992px){
+@media (min-width: 767px) and (max-width: 992px) {
 
     .banner_bg {
-        height: 100%!important;
+        height: 100% !important;
     }
 
     .mankind_banner_logo {
@@ -2293,7 +2522,7 @@ select {
         left: 50%;
         transform: translate(-50%, -3%);
     }
-    
+
     .social_heading_box {
         width: 60%;
     }
@@ -2315,7 +2544,7 @@ select {
         padding: 0;
         height: 100%;
     }
-    
+
     .healthok_gummies {
         background-image: none;
         padding: 0;
@@ -2339,28 +2568,36 @@ select {
     .logos_main_div {
         gap: 3rem;
     }
-    
+
     .gummies_banner_bg,
     .second_section_bg {
         height: 100%;
         background: none;
     }
 
+    .tablet_routine h3 {
+        font-size: 2.5rem;
+    }
+
+    .tablet_routine h4 {
+        font-size: 1.5rem;
+    }
+
     .footer_box1_content h3 {
         font-size: 2.8rem;
     }
-    
+
     .footer_logo {
-        width: 50%; 
+        width: 50%;
     }
 }
 
-@media (min-width: 993px) and (max-width: 1220px){
+@media (min-width: 993px) and (max-width: 1220px) {
 
     /* .banner_bg {
         height: 80vh!important;
     } */
-    
+
     .social_heading_box {
         width: 50%;
     }
@@ -2387,16 +2624,47 @@ select {
         line-height: 2.3rem;
     }
 
+    .third_banner_headings h4 {
+        font-size: 2.5rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 4.7rem;
+        line-height: 2.5rem;
+    }
+
+    .third_banner_content img {
+        width: 30%;
+    }
+
+    .tablet_routine h3 {
+        font-size: 2.5rem;
+    }
+
+    .tablet_routine h4 {
+        font-size: 1.5rem;
+    }
+
     .footer_box1_content h3 {
         font-size: 2.5rem;
     }
-    
+
     .footer_logo {
-        width: 35%; 
+        width: 35%;
     }
 }
 
-@media (min-width: 1220px) and (max-width: 1420px){
+@media (min-width: 1220px) and (max-width: 1350px) {
+    .tablet_routine h3 {
+        font-size: 2.5rem;
+    }
+
+    .tablet_routine h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1420px) {
 
     /* .banner_bg {
         height: 80vh!important;
@@ -2411,7 +2679,18 @@ select {
     .gummies_box p {
         font-size: 0.9rem;
     }
+
+    .third_banner_headings h4 {
+        font-size: 2.5rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 4.7rem;
+        line-height: 2.5rem;
+    }
+
 }
+
 /* @media (min-width: 993px) and (max-width: 1220px){
     .social_heading_box {
         width: 50%;
