@@ -2246,6 +2246,20 @@ select {
         background: none;
     }
 
+    .third_banner_headings h4 {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+
+    .third_banner_content img {
+        width: 60%;
+    }
+
     .tablet_sixth_section_content h3 {
         font-size: 1.5rem;
     }
@@ -2398,6 +2412,20 @@ select {
         background: none;
     }
 
+    .third_banner_headings h4 {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+
+    .third_banner_content img {
+        width: 60%;
+    }
+
     .tablet_sixth_section_content h3 {
         font-size: 1.5rem;
     }
@@ -2509,6 +2537,20 @@ select {
         background: none;
     }
 
+    .third_banner_headings h4 {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+
+    .third_banner_content img {
+        width: 50%;
+    }
+
     .tablet_sixth_section_content h3 {
         font-size: 2rem;
     }
@@ -2585,6 +2627,20 @@ select {
     .second_section_bg {
         height: 100%;
         background: none;
+    }
+
+    .third_banner_headings h4 {
+        letter-spacing: 0;
+        font-size: 2rem;
+    }
+
+    .third_banner_headings h2 {
+        font-size: 3.5rem;
+        line-height: 2rem;
+    }
+
+    .third_banner_content img {
+        width: 30%;
     }
 
     .tablet_routine h3 {
