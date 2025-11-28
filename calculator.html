@@ -166,7 +166,7 @@
                                         </div>
 
                                         <div class="buttons mt-2">
-                                            <button class="btn-calculate" onclick="calculateBMI()">Calculate</button>
+                                            <button class="btn-calculate" id="bmi-calc-btn" onclick="calculateBMI()" disabled>Calculate</button>
                                             <button class="btn-reset" id="bmi-reset-btn" onclick="resetBMI()" disabled>Reset</button>
                                         </div>
                                     </div>
@@ -266,7 +266,7 @@
                                         </div>
 
                                         <div class="buttons mt-2">
-                                            <button class="btn-calculate" onclick="calculateCalories()">Submit</button>
+                                            <button class="btn-calculate" id="calorie-calc-btn" onclick="calculateCalories()" disabled>Submit</button>
                                             <button class="btn-reset" id="cal-reset-btn" onclick="resetCalories()" disabled>Reset</button>
                                         </div>
                                     </div>
@@ -349,7 +349,7 @@
                                     </div>
 
                                     <div class="buttons mt-2">
-                                        <button class="btn-calculate" onclick="calculateBMR()">Submit</button>
+                                        <button class="btn-calculate" id="bmr-calc-btn" onclick="calculateBMR()" disabled>Submit</button>
                                         <button class="btn-reset" id="bmr-reset-btn" onclick="resetBMR()" disabled>Reset</button>
                                     </div>
                                 </div>
@@ -513,11 +513,44 @@
             bmr: document.getElementById('bmr-reset-btn')
         };
 
+        const calculateButtonMap = {
+            bmi: document.getElementById('bmi-calc-btn'),
+            calorie: document.getElementById('calorie-calc-btn'),
+            bmr: document.getElementById('bmr-calc-btn')
+        };
+
         function setResetButtonState(type, enabled) {
             const button = resetButtonMap[type];
             if (!button) return;
             button.disabled = !enabled;
         }
+
+        function setCalculateButtonState(type, enabled) {
+            const button = calculateButtonMap[type];
+            if (!button) return;
+            button.disabled = !enabled;
+        }
+
+        function updateCalculateButtonState(type) {
+            const section = document.querySelector(`#${type} .input-section`);
+            if (!section) return;
+            const hasValue = Array.from(section.querySelectorAll('input, select')).some(input => {
+                if (input.disabled) return false;
+                const value = (input.value || '').trim();
+                return value !== '';
+            });
+            setCalculateButtonState(type, hasValue);
+        }
+
+        function initInputWatcher(type) {
+            const section = document.querySelector(`#${type} .input-section`);
+            if (!section) return;
+            const handler = () => updateCalculateButtonState(type);
+            section.addEventListener('input', handler);
+            section.addEventListener('change', handler);
+        }
+
+        ['bmi', 'calorie', 'bmr'].forEach(initInputWatcher);
 
         // BMI Calculator
         let bmiHeightUnit = 'imperial';
@@ -627,6 +660,7 @@
             document.getElementById('bmi-result').style.color = '';
             document.getElementById('bmi-status').style.color = '';
             updateScalePointer(0, 'bmi');
+            setCalculateButtonState('bmi', false);
             setResetButtonState('bmi', false);
         }
 
@@ -727,6 +761,7 @@
             document.getElementById('cal-result').style.color = '';
             document.getElementById('cal-status').style.color = '';
             updateScalePointer(0, 'cal');
+            setCalculateButtonState('calorie', false);
             setResetButtonState('calorie', false);
         }
 
@@ -826,6 +861,7 @@
             document.getElementById('bmr-result').style.color = '';
             document.getElementById('bmr-status').style.color = '';
             updateScalePointer(0, 'bmr');
+            setCalculateButtonState('bmr', false);
             setResetButtonState('bmr', false);
         }
 
