@@ -1363,6 +1363,12 @@ select:focus {
     padding: 0.5rem 2.5rem;
 }
 
+.btn-reset:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .activity-levels {
     display: flex;
     flex-direction: column;
