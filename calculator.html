@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthOK - Calculator</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <!---LENIS CSS--->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.14/dist/lenis.css">
+
+    <!---BOOTSTRAP CSS--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!----DATA AOS CSS---->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+
+
+
+        <!--============ NAVBAR START==========--->
+
+        <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">
+                        <img src="./images/logo.png" class="w-100 " alt="logo">
+                    </div>
+                </a>
+                <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler_bars_icon">
+                        <span class="bar1" id="bar1"></span>
+                        <span class="bar2" id="bar2"></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link links px-2" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link links px-2 ms-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu shadow-lg border-0">
+                                <li>
+                                    <a class="dropdown-item" href="tablets.html">
+                                        <span><img src="./images/product1.png" alt="product1"></span> <span>healthok multivitamins tablets</span>
+                                    </a>
+                                </li>
+                                <hr class="my-2" style="color: gray; opacity: 0.2;" />
+                                <li>
+                                    <a class="dropdown-item" href="gummies.html">
+                                        <span><img src="./images/product2.png" alt="product2"></span> <span>healthok gummies</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link links px-2 ms-lg-2">Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link links px-2 ms-lg-2"> meal plan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link links px-2 ms-lg-2"> about us</a>
+                        </li>
+                        <li class="nav-item d-lg-flex align-items-center">
+                            <a href="contact.html" class="nav-link links px-2 ms-lg-2 active_link"> contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--============ NAVBAR END==========--->
+
+
+        <!--============BANNER START==========--->
+
+        <div class="container-fluid px-0 overflow-hidden contact_banner_bg">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 align-items-center">
+                <div class="col">
+                    <div class="contact_banner_content text-center" data-aos="zoom-in">
+                        <h2>Calculator</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="mankind_banner_logo">
+                <img src="./images/mankind_banner_logo.png" class="w-100 rounded-3" alt="">
+            </div>
+        </div>
+
+        <!--============BANNER END==========--->
+
+        <!--============SECTION SECOND START==========--->
+
+        <section class="my-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1">
+                    <div class="col">
+                        <div class="calculator_container">
+                            <div class="tabs">
+                                <button class="tab active" data-tab="bmi">
+                                    <span class="tab-icon"><img src="./images/icons/tab_icon1.png"></span>Body Mass Index Calculator
+                                </button>
+                                <button class="tab" data-tab="calorie">
+                                    <span class="tab-icon"><img src="./images/icons/tab_icon2.png"></span>Calorie Calculator
+                                </button>
+                                <button class="tab" data-tab="bmr">
+                                    <span class="tab-icon"><img src="./images/icons/tab_icon3.png"></span>Basal Metabolic Rate
+                                </button>
+                            </div>
+
+                            <!-- BMI Calculator -->
+                            <div class="tab-content active" id="bmi">
+                                <div class="info-box">
+                                    <div class="info-icon">
+                                        <img src="./images/icons/tab_content_icon1.png" alt="">
+                                    </div>
+                                    <div class="info-text">
+                                        <strong>Body mass index (BMI)</strong> is a tool to measure the body fat based on height and weight that applies to adult men and women.
+                                    </div>
+                                </div>
+
+                                <div class="calculator-grid">
+                                    <div class="input-section">
+                                        <div class="d-flex gap-3">
+                                            <div class="input-group">
+                                                <label class="input-label">Gender</label>
+                                                <div class="gender-buttons">
+                                                    <button class="gender-btn" data-gender="male">Male</button>
+                                                    <button class="gender-btn active" data-gender="female">Female</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label class="input-label">Age</label>
+                                                <input class="rounded-2 overflow-hidden position-relative pe-5" type="number" id="bmi-age" value="20" min="1" max="120">
+                                                <span style="font-size: 14px; color: #666; position: absolute; bottom: 17%; right: 5%;">Years</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex gap-3">
+                                            <div class="input-group">
+                                                <label class="input-label">Height</label>
+                                                <div class="height-inputs">
+                                                    <input type="number" id="bmi-height-ft" value="5" min="1" max="8" placeholder="Feet">
+                                                    <input type="number" id="bmi-height-in" value="6" min="1" max="11" placeholder="Inches">
+                                                </div>
+                                                <span class="unit-toggle" onclick="toggleBMIHeightUnit()">Switch to cm</span>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label class="input-label">Weight</label>
+                                                <input class="rounded-2 overflow-hidden position-relative" style="padding-right: 3.2rem;" type="number" id="bmi-weight" value="56" min="1" max="500">
+                                                <span style="font-size: 14px; color: #666; position: absolute; bottom: 40%; right: 5%;">in Kgs</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="buttons mt-2">
+                                            <button class="btn-calculate" onclick="calculateBMI()">Calculate</button>
+                                            <button class="btn-reset" onclick="resetBMI()">Reset</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div class="result-section">
+                                            <div class="result-label">Your BMI is</div>
+                                            <div class="result-value" id="bmi-result">22.64</div>
+
+                                            <div class="bmi-scale-wrapper">
+                                                <div class="bmi-scale">
+                                                    <span class="bmi-segment underweight"></span>
+                                                    <span class="bmi-segment normal"></span>
+                                                    <span class="bmi-segment overweight"></span>
+                                                    <span class="bmi-segment obese"></span>
+                                                    <span class="bmi-pointer" id="bmi-pointer"></span>
+                                                </div>
+                                                <div class="scale-labels">
+                                                    <span>Underweight</span>
+                                                    <span>Normal</span>
+                                                    <span>Overweight</span>
+                                                    <span>Obese</span>
+                                                </div>
+                                            </div>
+                                            <div class="result-status" id="bmi-status">Great shape!</div>
+                                            <div class="result-message" id="bmi-message">
+                                                By maintaining a healthy weight, you lower your risk of developing serious health problems.
+                                            </div>
+                                        </div>
+                                        <div class="result-range mt-2" id="bmi-range">Healthy BMI range: 18.5 kg/m² - 25 kg/m²</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Calorie Calculator -->
+                            <div class="tab-content" id="calorie">
+                                <div class="info-box">
+                                    <div class="info-icon">
+                                        <img src="./images/icons/tab_content_icon2.png" alt="">
+                                    </div>
+                                    <div class="info-text">
+                                        <strong>Body mass index (BMI)</strong> is a measure of body fat based on height and weight that applies to adult men and women
+                                    </div>
+                                </div>
+
+                                <div class="calculator-grid">
+                                    <div class="input-section">
+                                        <div class="d-flex gap-3">
+                                            <div class="input-group">
+                                                <label class="input-label">Gender</label>
+                                                <div class="gender-buttons">
+                                                    <button class="gender-btn" data-gender="male" onclick="selectCalorieGender('male')">Male</button>
+                                                    <button class="gender-btn active" data-gender="female" onclick="selectCalorieGender('female')">Female</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label class="input-label">Age</label>
+                                                <input class="rounded-2 overflow-hidden position-relative pe-5" type="number" id="cal-age" value="20" min="1" max="120">
+                                                <span style="font-size: 14px; color: #666; position: absolute; bottom: 17%; right: 5%;">Years</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex gap-3">
+                                            <div class="input-group">
+                                                <label class="input-label">Height</label>
+                                                <div class="height-inputs">
+                                                    <input type="number" id="cal-height-ft" value="5" min="1" max="8" placeholder="Feet">
+                                                    <input type="number" id="cal-height-in" value="6" min="1" max="11" placeholder="Inches">
+                                                </div>
+                                                <span class="unit-toggle" onclick="toggleCalorieHeightUnit()">Switch to cm</span>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label class="input-label">Weight</label>
+                                                <input class="rounded-2 overflow-hidden position-relative" style="padding-right: 3.2rem;" type="number" id="cal-weight" value="56" min="1" max="500">
+                                                <span style="font-size: 14px; color: #666; position: absolute; bottom: 40%; right: 5%;">in Kgs</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <label class="input-label">Exercise Level</label>
+                                            <div style="position: relative; display: inline-block; width: fit-content;">
+                                                <select id="cal-exercise" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 14px; appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 2.5em; background: transparent;">
+                                                    <option value="">Please Select</option>
+                                                    <option value="1.2">Sedentary (little or no exercise)</option>
+                                                    <option value="1.375">Lightly active (1-3 days/week)</option>
+                                                    <option value="1.55">Moderately active (3-5 days/week)</option>
+                                                    <option value="1.725">Very active (6-7 days/week)</option>
+                                                    <option value="1.9">Extra active (very hard exercise & physical job)</option>
+                                                </select>
+                                                <span style="pointer-events: none; position: absolute; right: 0.9em; top: 50%; transform: translateY(-50%); font-size: 17px; color: #888; background: white;">
+                                                    <svg width="18" height="18" style="display:block;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                                                        <path d="M143 352.3l-136.2-135c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 95.1 96.4-95.1c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136.2 135c-9.4 9.4-24.6 9.4-34 0z" /></svg>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="buttons">
+                                            <button class="btn-calculate" onclick="calculateCalories()">Submit</button>
+                                            <button class="btn-reset" onclick="resetCalories()">Reset</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div class="result-section">
+                                            <div class="result-label">Your Calorie Score is</div>
+                                            <div class="result-value" id="cal-result">22.64</div>
+                                            <div class="bmi-scale-wrapper">
+                                                <div class="bmi-scale">
+                                                    <span class="bmi-segment underweight"></span>
+                                                    <span class="bmi-segment normal"></span>
+                                                    <span class="bmi-segment overweight"></span>
+                                                    <span class="bmi-segment obese"></span>
+                                                    <span class="bmi-pointer" id="cal-pointer"></span>
+                                                </div>
+                                                <div class="scale-labels">
+                                                    <span>Underweight</span>
+                                                    <span>Normal</span>
+                                                    <span>Overweight</span>
+                                                    <span>Obese</span>
+                                                </div>
+                                            </div>
+                                            <div class="result-status" id="cal-status">Great shape!</div>
+                                            <div class="result-message" id="cal-message">
+                                                By maintaining a healthy weight, you lower your risk of developing serious health problems.
+                                            </div>
+                                        </div>
+                                        <div class="result-range">Healthy BMI range: 18.5 kg/m² - 25 kg/m²</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- BMR Calculator -->
+                        <div class="tab-content" id="bmr">
+                            <div class="info-box">
+                                <div class="info-icon">
+                                    <img src="./images/icons/tab_content_icon2.png" alt="">
+                                </div>
+                                <div class="info-text">
+                                    The <strong>Basal Metabolic Rate (BMR) Calculator</strong> estimates your basal metabolic rate—the amount of energy expended while at rest in a neutrally temperate environment
+                                </div>
+                            </div>
+
+                            <div class="calculator-grid">
+                                <div class="input-section">
+                                    <div class="d-flex gap-3">
+                                        <div class="input-group">
+                                            <label class="input-label">Gender</label>
+                                            <div class="gender-buttons">
+                                                <button class="gender-btn" data-gender="male" onclick="selectBMRGender('male')">Male</button>
+                                                <button class="gender-btn active" data-gender="female" onclick="selectBMRGender('female')">Female</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <label class="input-label">Age</label>
+                                            <input class="rounded-2 overflow-hidden position-relative pe-5" type="number" id="bmr-age" value="20" min="1" max="120">
+                                            <span style="font-size: 14px; color: #666; position: absolute; bottom: 17%; right: 5%;">Years</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex gap-3">
+                                        <div class="input-group">
+                                            <label class="input-label">Height</label>
+                                            <div class="height-inputs">
+                                                <input type="number" id="bmr-height-ft" value="5" min="1" max="8" placeholder="Feet">
+                                                <input type="number" id="bmr-height-in" value="6" min="1" max="11" placeholder="Inches">
+                                            </div>
+                                            <span class="unit-toggle" onclick="toggleBMRHeightUnit()">Switch to cm</span>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <label class="input-label">Weight</label>
+                                            <input class="rounded-2 overflow-hidden position-relative" style="padding-right: 3.2rem;" type="number" id="bmr-weight" value="56" min="1" max="500">
+                                            <span style="font-size: 14px; color: #666; position: absolute; bottom: 40%; right: 5%;">in Kgs</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button class="btn-calculate" onclick="calculateBMR()">Submit</button>
+                                        <button class="btn-reset" onclick="resetBMR()">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="result-section">
+                                        <div class="result-label">Your Calorie Score is</div>
+                                        <div class="result-value" id="bmr-result">22.64</div>
+                                        <div class="bmi-scale-wrapper">
+                                            <div class="bmi-scale">
+                                                <span class="bmi-segment underweight"></span>
+                                                <span class="bmi-segment normal"></span>
+                                                <span class="bmi-segment overweight"></span>
+                                                <span class="bmi-segment obese"></span>
+                                                <span class="bmi-pointer" id="bmr-pointer"></span>
+                                            </div>
+                                            <div class="scale-labels">
+                                                <span>Underweight</span>
+                                                <span>Normal</span>
+                                                <span>Overweight</span>
+                                                <span>Obese</span>
+                                            </div>
+                                        </div>
+                                        <div class="result-status" id="bmr-status">Great shape!</div>
+                                        <div class="result-message" id="bmr-message">
+                                            By maintaining a healthy weight, you lower your risk of developing serious health problems.
+                                        </div>
+                                    </div>
+                                    <div class="result-range">Healthy BMI range: 18.5 kg/m² - 25 kg/m²</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--============SECTION SECOND END==========--->
+
+
+        <!--============FOOTER START=============--->
+
+        <footer>
+            <div class="container-fluid px-0 overflow-hidden footer_bg pt-5">
+                <div class="container">
+                    <div class="footer">
+                        <div class="footer_box1">
+                            <div class="footer_box1_content">
+                                <div class="footer_logo">
+                                    <a href="index.html">
+                                        <img src="./images/footer_logo.png" class="w-100" alt="footer logo">
+                                    </a>
+                                </div>
+                                <h3 class="mt-4">Promote your wellness <br> with a pill and some pop!</h3>
+                            </div>
+                        </div>
+                        <div class="footer_box2">
+                            <div class="footer_box2_content mt-3 mt-sm-0 mt-md-0 mt-lg-0">
+                                <h3>COMPANY</h3>
+                                <ul class="list-unstyled mt-4">
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lifestyle Guide</a>
+                                    </li>
+                                    <!-- <li>
+                    <a href="#">Products</a>
+                  </li> -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link links dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Products
+                                        </a>
+                                        <ul class="dropdown-menu shadow-lg border-0">
+                                            <li>
+                                                <a class="dropdown-item" href="tablets.html">
+                                                    <span><img src="./images/product1.png" alt="product1"></span> <span>healthok multivitamins tablets</span>
+                                                </a>
+                                            </li>
+                                            <hr class="my-2" style="color: gray; opacity: 0.2;" />
+                                            <li>
+                                                <a class="dropdown-item" href="gummies.html">
+                                                    <span><img src="./images/product2.png" alt="product2"></span> <span>healthok gummies</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_box2_content">
+                                <h3>QUICK LINKS</h3>
+                                <ul class="list-unstyled mt-4">
+                                    <li>
+                                        <a href="blog.html">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ’s</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_box2_content">
+                                <h3>CONNECT WITH US</h3>
+                                <div class="footer_icons">
+                                    <a href="#">
+                                        <iconify-icon icon="hugeicons:instagram" class="icon p-0"></iconify-icon>
+                                    </a>
+                                    <a href="#">
+                                        <iconify-icon icon="iconoir:facebook" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                                    </a>
+                                    <a href="#">
+                                        <iconify-icon icon="pajamas:twitter" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                                    </a>
+                                    <a href="#">
+                                        <iconify-icon icon="si:youtube-line" class="icon border border-1 border-top-0 border-end-0 border-bottom-0"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="color: var(--white); opacity: 0.3; margin-top: 2rem;">
+
+                    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 mb-5 mb-lg-0">
+                        <div class="col"></div>
+                        <div class="col text-center">
+                            <p class="copyright">© <span id="year"></span> Healthok Private Limited. All rights reserved. </p>
+                        </div>
+                        <div class="col text-lg-end text-center">
+                            <a href="#" class="privacy_policy">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--============FOOTER END==========--->
+    </main>
+
+    <!--=====================JAVASCRIPTS---STARTS==================--->
+
+    <!---BOOTSTRAP JS--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // BMI Calculator
+        let bmiHeightUnit = 'imperial';
+        let bmiGender = 'female';
+
+        document.querySelectorAll('#bmi .gender-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('#bmi .gender-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                bmiGender = this.dataset.gender;
+            });
+        });
+
+        function toggleBMIHeightUnit() {
+            if (bmiHeightUnit === 'imperial') {
+                bmiHeightUnit = 'metric';
+                document.querySelector('#bmi .unit-toggle').textContent = 'Switch to ft/in';
+                document.querySelector('#bmi .height-inputs').innerHTML =
+                    '<input type="number" id="bmi-height-cm" value="168" min="1" max="300" placeholder="cm">';
+            } else {
+                bmiHeightUnit = 'imperial';
+                document.querySelector('#bmi .unit-toggle').textContent = 'Switch to cm';
+                document.querySelector('#bmi .height-inputs').innerHTML =
+                    '<input type="number" id="bmi-height-ft" value="5" min="1" max="8" placeholder="Feet">' +
+                    '<input type="number" id="bmi-height-in" value="6" min="1" max="11" placeholder="Inches">';
+            }
+        }
+
+        function updateScalePointer(bmi, prefix) {
+            const pointer = document.getElementById(`${prefix}-pointer`);
+            if (!pointer) return;
+            const MIN_BMI = 12;
+            const MAX_BMI = 40;
+            const clampedBMI = Math.min(Math.max(bmi, MIN_BMI), MAX_BMI);
+            const percentage = ((clampedBMI - MIN_BMI) / (MAX_BMI - MIN_BMI)) * 100;
+            pointer.style.left = `${percentage}%`;
+        }
+
+        function calculateBMI() {
+            let heightInMeters;
+
+            if (bmiHeightUnit === 'imperial') {
+                const feet = parseFloat(document.getElementById('bmi-height-ft').value) || 0;
+                const inches = parseFloat(document.getElementById('bmi-height-in').value) || 0;
+                heightInMeters = ((feet * 12) + inches) * 0.0254;
+            } else {
+                const cm = parseFloat(document.getElementById('bmi-height-cm').value) || 0;
+                heightInMeters = cm / 100;
+            }
+
+            const weight = parseFloat(document.getElementById('bmi-weight').value) || 0;
+
+            if (heightInMeters > 0 && weight > 0) {
+                const bmi = weight / (heightInMeters * heightInMeters);
+                const bmiValue = bmi.toFixed(2);
+
+                document.getElementById('bmi-result').textContent = bmiValue;
+
+                let status, message, color;
+                if (bmi < 18.5) {
+                    status = 'Underweight';
+                    message = 'You may need to gain weight. Consider consulting with a healthcare provider.';
+                    color = '#2196F3';
+                } else if (bmi < 25) {
+                    status = 'Great shape!';
+                    message = 'By maintaining a healthy weight, you lower your risk of developing serious health problems.';
+                    color = '#4CAF50';
+                } else if (bmi < 30) {
+                    status = 'Overweight';
+                    message = 'You may need to lose some weight for better health. Consider a balanced diet and exercise.';
+                    color = '#FFC107';
+                } else {
+                    status = 'Obese';
+                    message = 'It is recommended to lose weight to reduce health risks. Consult with a healthcare provider.';
+                    color = '#FF5722';
+                }
+
+                document.getElementById('bmi-status').textContent = status;
+                document.getElementById('bmi-message').textContent = message;
+                document.getElementById('bmi-result').style.color = color;
+                document.getElementById('bmi-status').style.color = color;
+                updateScalePointer(bmi, 'bmi');
+            }
+        }
+
+        function resetBMI() {
+            document.getElementById('bmi-age').value = '20';
+            document.getElementById('bmi-weight').value = '56';
+            if (bmiHeightUnit === 'imperial') {
+                document.getElementById('bmi-height-ft').value = '5';
+                document.getElementById('bmi-height-in').value = '6';
+            } else {
+                document.getElementById('bmi-height-cm').value = '168';
+            }
+            calculateBMI();
+        }
+
+        // Calorie Calculator
+        let calorieGender = 'female';
+        let calorieHeightUnit = 'imperial';
+
+        function selectCalorieGender(gender) {
+            calorieGender = gender;
+            document.querySelectorAll('#calorie .gender-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`#calorie .gender-btn[data-gender="${gender}"]`).classList.add('active');
+        }
+
+        function toggleCalorieHeightUnit() {
+            if (calorieHeightUnit === 'imperial') {
+                calorieHeightUnit = 'metric';
+                document.querySelector('#calorie .unit-toggle').textContent = 'Switch to ft/in';
+                document.querySelector('#calorie .height-inputs').innerHTML =
+                    '<input type="number" id="cal-height-cm" value="168" min="1" max="300" placeholder="cm">';
+            } else {
+                calorieHeightUnit = 'imperial';
+                document.querySelector('#calorie .unit-toggle').textContent = 'Switch to cm';
+                document.querySelector('#calorie .height-inputs').innerHTML =
+                    '<input type="number" id="cal-height-ft" value="5" min="1" max="8" placeholder="Feet">' +
+                    '<input type="number" id="cal-height-in" value="6" min="1" max="11" placeholder="Inches">';
+            }
+        }
+
+        function calculateCalories() {
+            let heightInMeters;
+
+            if (calorieHeightUnit === 'imperial') {
+                const feet = parseFloat(document.getElementById('cal-height-ft').value) || 0;
+                const inches = parseFloat(document.getElementById('cal-height-in').value) || 0;
+                heightInMeters = ((feet * 12) + inches) * 0.0254;
+            } else {
+                const cm = parseFloat(document.getElementById('cal-height-cm').value) || 0;
+                heightInMeters = cm / 100;
+            }
+
+            const weight = parseFloat(document.getElementById('cal-weight').value) || 0;
+
+            if (heightInMeters > 0 && weight > 0) {
+                const bmi = weight / (heightInMeters * heightInMeters);
+                const bmiValue = bmi.toFixed(2);
+
+                document.getElementById('cal-result').textContent = bmiValue;
+
+                let status, message, color;
+                if (bmi < 18.5) {
+                    status = 'Underweight';
+                    message = 'You may need to gain weight. Consider consulting with a healthcare provider.';
+                    color = '#2196F3';
+                } else if (bmi < 25) {
+                    status = 'Great shape!';
+                    message = 'By maintaining a healthy weight, you lower your risk of developing serious health problems.';
+                    color = '#4CAF50';
+                } else if (bmi < 30) {
+                    status = 'Overweight';
+                    message = 'You may need to lose some weight for better health. Consider a balanced diet and exercise.';
+                    color = '#FFC107';
+                } else {
+                    status = 'Obese';
+                    message = 'It is recommended to lose weight to reduce health risks. Consult with a healthcare provider.';
+                    color = '#FF5722';
+                }
+
+                document.getElementById('cal-status').textContent = status;
+                document.getElementById('cal-message').textContent = message;
+                document.getElementById('cal-result').style.color = color;
+                document.getElementById('cal-status').style.color = color;
+                updateScalePointer(bmi, 'cal');
+            }
+        }
+
+        function resetCalories() {
+            document.getElementById('cal-age').value = '20';
+            document.getElementById('cal-weight').value = '56';
+            document.getElementById('cal-exercise').value = '';
+            if (calorieHeightUnit === 'imperial') {
+                document.getElementById('cal-height-ft').value = '5';
+                document.getElementById('cal-height-in').value = '6';
+            } else {
+                document.getElementById('cal-height-cm').value = '168';
+            }
+            calculateCalories();
+        }
+
+        // BMR Calculator
+        let bmrGender = 'female';
+        let bmrHeightUnit = 'imperial';
+
+        function selectBMRGender(gender) {
+            bmrGender = gender;
+            document.querySelectorAll('#bmr .gender-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`#bmr .gender-btn[data-gender="${gender}"]`).classList.add('active');
+        }
+
+        function toggleBMRHeightUnit() {
+            if (bmrHeightUnit === 'imperial') {
+                bmrHeightUnit = 'metric';
+                document.querySelector('#bmr .unit-toggle').textContent = 'Switch to ft/in';
+                document.querySelector('#bmr .height-inputs').innerHTML =
+                    '<input type="number" id="bmr-height-cm" value="168" min="1" max="300" placeholder="cm">';
+            } else {
+                bmrHeightUnit = 'imperial';
+                document.querySelector('#bmr .unit-toggle').textContent = 'Switch to cm';
+                document.querySelector('#bmr .height-inputs').innerHTML =
+                    '<input type="number" id="bmr-height-ft" value="5" min="1" max="8" placeholder="Feet">' +
+                    '<input type="number" id="bmr-height-in" value="6" min="1" max="11" placeholder="Inches">';
+            }
+        }
+
+        function calculateBMR() {
+            let heightInMeters;
+
+            if (bmrHeightUnit === 'imperial') {
+                const feet = parseFloat(document.getElementById('bmr-height-ft').value) || 0;
+                const inches = parseFloat(document.getElementById('bmr-height-in').value) || 0;
+                heightInMeters = ((feet * 12) + inches) * 0.0254;
+            } else {
+                const cm = parseFloat(document.getElementById('bmr-height-cm').value) || 0;
+                heightInMeters = cm / 100;
+            }
+
+            const weight = parseFloat(document.getElementById('bmr-weight').value) || 0;
+
+            if (heightInMeters > 0 && weight > 0) {
+                const bmi = weight / (heightInMeters * heightInMeters);
+                const bmiValue = bmi.toFixed(2);
+
+                document.getElementById('bmr-result').textContent = bmiValue;
+
+                let status, message, color;
+                if (bmi < 18.5) {
+                    status = 'Underweight';
+                    message = 'You may need to gain weight. Consider consulting with a healthcare provider.';
+                    color = 'var(--active-tab)';
+                } else if (bmi < 25) {
+                    status = 'Great shape!';
+                    message = 'By maintaining a healthy weight, you lower your risk of developing serious health problems.';
+                    color = '#4CAF50';
+                } else if (bmi < 30) {
+                    status = 'Overweight';
+                    message = 'You may need to lose some weight for better health. Consider a balanced diet and exercise.';
+                    color = '#FFC107';
+                } else {
+                    status = 'Obese';
+                    message = 'It is recommended to lose weight to reduce health risks. Consult with a healthcare provider.';
+                    color = '#FF5722';
+                }
+
+                document.getElementById('bmr-status').textContent = status;
+                document.getElementById('bmr-message').textContent = message;
+                document.getElementById('bmr-result').style.color = color;
+                document.getElementById('bmr-status').style.color = color;
+                updateScalePointer(bmi, 'bmr');
+            }
+        }
+
+        function resetBMR() {
+            document.getElementById('bmr-age').value = '20';
+            document.getElementById('bmr-weight').value = '56';
+            if (bmrHeightUnit === 'imperial') {
+                document.getElementById('bmr-height-ft').value = '5';
+                document.getElementById('bmr-height-in').value = '6';
+            } else {
+                document.getElementById('bmr-height-cm').value = '168';
+            }
+            calculateBMR();
+        }
+
+        // Initialize calculations
+        calculateBMI();
+        calculateCalories();
+        calculateBMR();
+    </script>
+
+    <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
+
+    <!----DATA AOS JS----->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== "undefined" && AOS.init) {
+                AOS.init({
+                    offset: 120,
+                    duration: 1200,
+                    once: false, // Animation triggers every time you scroll to section
+                    mirror: true // Animation triggers on scroll up as well
+                });
+
+                // Ensure AOS refreshes when lazy-loaded images/videos appear
+                let refreshAOS = function() {
+                    AOS.refreshHard();
+                };
+
+                // Observe all sections with data-aos
+                if ('IntersectionObserver' in window) {
+                    const aosSections = document.querySelectorAll('[data-aos]');
+                    let observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                setTimeout(refreshAOS, 10);
+                            }
+                        });
+                    }, {
+                        threshold: 0.15
+                    });
+                    aosSections.forEach(function(section) {
+                        observer.observe(section);
+                    });
+                } else {
+                    // Fallback to periodic refresh
+                    // setInterval(refreshAOS, 1000);
+                }
+            }
+        });
+    </script>
+
+    <script>
+        const year = document.querySelector("#year");
+        year.textContent = new Date().getFullYear();
+        year.style.color = "var(--white)"
+    </script>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
+
+</html>
