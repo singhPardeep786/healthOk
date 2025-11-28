@@ -59,6 +59,8 @@ body {
     --white: #F8FCFE;
     --contactwhite: #F1F1E6;
     --orange: #E06D02;
+    --underweight: #FFD636;
+    --overweight: #EC9E17;
     --lightgreen: #E6FFF2;
     --lightgreen2: #DCF9FF;
     --green: #0A8044;
@@ -1253,7 +1255,7 @@ select:focus {
 }
 
 .bmi-segment.underweight {
-    background: #F6C443;
+    background: var(--underweight);
 }
 
 .bmi-segment.normal {
@@ -1261,7 +1263,7 @@ select:focus {
 }
 
 .bmi-segment.overweight {
-    background: #F9C24D;
+    background: var(--overweight);
 }
 
 .bmi-segment.obese {
@@ -1363,7 +1365,8 @@ select:focus {
     padding: 0.5rem 2.5rem;
 }
 
-.btn-reset:disabled {
+.btn-reset:disabled,
+.btn-calculate:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
