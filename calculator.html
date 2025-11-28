@@ -167,7 +167,7 @@
 
                                         <div class="buttons mt-2">
                                             <button class="btn-calculate" onclick="calculateBMI()">Calculate</button>
-                                            <button class="btn-reset" onclick="resetBMI()">Reset</button>
+                                            <button class="btn-reset" id="bmi-reset-btn" onclick="resetBMI()" disabled>Reset</button>
                                         </div>
                                     </div>
 
@@ -267,7 +267,7 @@
 
                                         <div class="buttons mt-2">
                                             <button class="btn-calculate" onclick="calculateCalories()">Submit</button>
-                                            <button class="btn-reset" onclick="resetCalories()">Reset</button>
+                                            <button class="btn-reset" id="cal-reset-btn" onclick="resetCalories()" disabled>Reset</button>
                                         </div>
                                     </div>
 
@@ -350,7 +350,7 @@
 
                                     <div class="buttons mt-2">
                                         <button class="btn-calculate" onclick="calculateBMR()">Submit</button>
-                                        <button class="btn-reset" onclick="resetBMR()">Reset</button>
+                                        <button class="btn-reset" id="bmr-reset-btn" onclick="resetBMR()" disabled>Reset</button>
                                     </div>
                                 </div>
                                 <div class="text-center">
@@ -507,6 +507,18 @@
             });
         });
 
+        const resetButtonMap = {
+            bmi: document.getElementById('bmi-reset-btn'),
+            calorie: document.getElementById('cal-reset-btn'),
+            bmr: document.getElementById('bmr-reset-btn')
+        };
+
+        function setResetButtonState(type, enabled) {
+            const button = resetButtonMap[type];
+            if (!button) return;
+            button.disabled = !enabled;
+        }
+
         // BMI Calculator
         let bmiHeightUnit = 'imperial';
         let bmiGender = 'female';
@@ -588,6 +600,7 @@
                 document.getElementById('bmi-result').style.color = color;
                 document.getElementById('bmi-status').style.color = color;
                 updateScalePointer(bmi, 'bmi');
+                setResetButtonState('bmi', true);
             } else {
                 document.getElementById('bmi-result').textContent = 'Enter values to calculate';
                 document.getElementById('bmi-status').textContent = 'Status will appear here';
@@ -595,6 +608,7 @@
                 document.getElementById('bmi-result').style.color = '';
                 document.getElementById('bmi-status').style.color = '';
                 updateScalePointer(0, 'bmi');
+                setResetButtonState('bmi', false);
             }
         }
 
@@ -613,6 +627,7 @@
             document.getElementById('bmi-result').style.color = '';
             document.getElementById('bmi-status').style.color = '';
             updateScalePointer(0, 'bmi');
+            setResetButtonState('bmi', false);
         }
 
         // Calorie Calculator
@@ -684,6 +699,7 @@
                 document.getElementById('cal-result').style.color = color;
                 document.getElementById('cal-status').style.color = color;
                 updateScalePointer(bmi, 'cal');
+                setResetButtonState('calorie', true);
             } else {
                 document.getElementById('cal-result').textContent = 'Enter values to calculate';
                 document.getElementById('cal-status').textContent = 'Status will appear here';
@@ -691,6 +707,7 @@
                 document.getElementById('cal-result').style.color = '';
                 document.getElementById('cal-status').style.color = '';
                 updateScalePointer(0, 'cal');
+                setResetButtonState('calorie', false);
             }
         }
 
@@ -710,6 +727,7 @@
             document.getElementById('cal-result').style.color = '';
             document.getElementById('cal-status').style.color = '';
             updateScalePointer(0, 'cal');
+            setResetButtonState('calorie', false);
         }
 
         // BMR Calculator
@@ -781,6 +799,7 @@
                 document.getElementById('bmr-result').style.color = color;
                 document.getElementById('bmr-status').style.color = color;
                 updateScalePointer(bmi, 'bmr');
+                setResetButtonState('bmr', true);
             } else {
                 document.getElementById('bmr-result').textContent = 'Enter values to calculate';
                 document.getElementById('bmr-status').textContent = 'Status will appear here';
@@ -788,6 +807,7 @@
                 document.getElementById('bmr-result').style.color = '';
                 document.getElementById('bmr-status').style.color = '';
                 updateScalePointer(0, 'bmr');
+                setResetButtonState('bmr', false);
             }
         }
 
@@ -806,6 +826,7 @@
             document.getElementById('bmr-result').style.color = '';
             document.getElementById('bmr-status').style.color = '';
             updateScalePointer(0, 'bmr');
+            setResetButtonState('bmr', false);
         }
 
         // Initialize calculations
