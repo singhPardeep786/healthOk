@@ -53,6 +53,8 @@ body {
     --blue: #3254BA;
     --darkblue: #26237A;
     --iconbg: #1E1E65;
+    --tab-active: #1A3D5F;
+    --info-box-bg: #F1F3FA;
     --black: #303030;
     --white: #F8FCFE;
     --contactwhite: #F1F1E6;
@@ -62,6 +64,7 @@ body {
     --green: #0A8044;
     --green2: #39C874;
     --green3: #34BA61;
+    --gender-btn-active: #E3FFE3;
     --darkgreen: #032011;
     --lightblue: #BFE4F7;
     --lightblue2: #ECFAFF;
@@ -991,6 +994,424 @@ select {
 }
 
 /*----========SECTION SECOND END =========----*/
+
+
+/*----========CALCULATOR PAGE START =========----*/
+
+.calculator_container {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+    flex: 1;
+    padding: 18px 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.tab:hover {
+    background: #f9f9f9;
+}
+
+.tab.active {
+    color: var(--tab-active);
+    font-weight: 500;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--tab-active);
+}
+
+.tab-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.info-box {
+    background: var(--info-box-bg);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon {
+    font-size: 50px;
+    flex-shrink: 0;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.gender-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-btn {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.gender-btn:hover {
+    border-color: var(--green2);
+}
+
+.gender-btn.active {
+    background: var(--gender-btn-active);
+    color: var(--black);
+    border-color: var(--green2);
+}
+
+.height-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.height-inputs input {
+    flex: 1;
+}
+
+input[type="number"],
+select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--tab-active);
+}
+
+.unit-toggle {
+    font-size: 12px;
+    color: var(--tab-active);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.result-section {
+    background: #FFF5EB;
+    padding: 36px 32px 30px;
+    text-align: center;
+    border: 1px solid #F7D9B9;
+    position: relative;
+}
+
+.result-label {
+    font-size: 18px;
+    font-family: 'medium';
+    color: #6F6B63;
+    margin-bottom: 16px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.result-value {
+    font-size: 56px;
+    color: var(--green3);
+    font-family: 'bold';
+    background: #DEF8E4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 18px 56px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    min-width: 180px;
+}
+
+.bmi-custom-scale {
+    width: 94%;
+    margin: 28px auto 0 auto;
+    padding: 0;
+    position: relative;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.result-status {
+    color: rgb(76, 175, 80);
+    font-size: 34px;
+    font-family: 'bold';
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.result-message {
+    font-size: 17px;
+    color: #4E4B45;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-range {
+    font-size: 15px;
+    color: #FF6B00;
+    font-weight: 600;
+    margin-top: 22px;
+}
+
+.bmi-scale-wrapper {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.bmi-scale {
+    width: 100%;
+    height: 12px;
+    display: flex;
+    gap: 6px;
+    background: transparent;
+    border-radius: 999px;
+    margin: 12px 0 6px 0;
+    position: relative;
+    padding: 0 4px;
+}
+
+.bmi-segment {
+    flex: 1;
+    border-radius: 999px;
+}
+
+.bmi-segment.underweight {
+    background: #F6C443;
+}
+
+.bmi-segment.normal {
+    background: #9AD86C;
+}
+
+.bmi-segment.overweight {
+    background: #F9C24D;
+}
+
+.bmi-segment.obese {
+    background: #F0753E;
+}
+
+.bmi-pointer {
+    position: absolute;
+    top: -9px;
+    width: 3px;
+    height: 30px;
+    background: #1E1E1E;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+}
+
+.bmi-pointer::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #1E1E1E;
+    border-radius: 50%;
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6F6B63;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-calculate {
+    border: 0;
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
+    background: var(--gradientbtn);
+    color: var(--white) !important;
+}
+
+.btn-reset {
+    background: transparent;
+    color: var(--black);
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--green2) !important;
+}
+
+.activity-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-option {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.activity-option:hover {
+    border-color: var(--tab-active);
+    background: #f9f9f9;
+}
+
+.activity-option.selected {
+    border-color: var(--tab-active);
+    background: var(--info-box-bg);
+}
+
+.activity-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.activity-desc {
+    font-size: 12px;
+    color: #666;
+}
+
+.calorie-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.calorie-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.calorie-card-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.calorie-card-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--tab-active);
+}
+
+.calorie-card-unit {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calorie-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*----========CALCULATOR PAGE END =========----*/
 
 
 /*----========ABOUT SECTION THIRD START =========----*/
@@ -2266,6 +2687,12 @@ select {
 
     .tablet_sixth_section_content h3 {
         font-size: 1.5rem;
+    }
+
+    .tab-content {
+        width: 95%;
+        padding: 10px;
+        margin: 0 auto;
     }
 
     .footer {
