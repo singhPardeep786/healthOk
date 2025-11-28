@@ -1179,7 +1179,7 @@ select:focus {
 }
 
 .result-value {
-    font-size: 56px;
+    font-size: 40px;
     color: var(--green3);
     font-family: 'bold';
     background: #DEF8E4;
@@ -1318,20 +1318,49 @@ select:focus {
     transition: all 0.3s;
 }
 
-.btn-calculate {
+.btn-calculate,
+.btn-reset {
     border: 0;
     padding: 0.5rem 2rem;
     border-radius: 0.2rem;
+    background: transparent;
+    border: 2px solid var(--green2);
+    transition: all ease 0.4s;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-calculate::after,
+.btn-reset::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
     background: var(--gradientbtn);
-    color: var(--white) !important;
+    top: 0;
+    left: 0;
+    transition: all ease 0.4s;
+    z-index: -1;
+}
+
+.btn-calculate:hover,
+.btn-reset:hover {
+    color: var(--white);
+    border: 2px solid var(--green2);
+}
+
+.btn-calculate:hover::after,
+.btn-reset:hover::after {
+    width: 100%;
+}
+
+.btn-calculate:active,
+.btn-reset:active {
+    scale: 0.95;
 }
 
 .btn-reset {
-    background: transparent;
-    color: var(--black);
     padding: 0.5rem 2.5rem;
-    border-radius: 0.2rem;
-    border: 2px solid var(--green2) !important;
 }
 
 .activity-levels {
