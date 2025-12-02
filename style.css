@@ -1583,7 +1583,7 @@ select {
 
 .faq-answer-content {
     padding-top: 16px;
-    font-size: 15px;
+    font-size: 1rem;
     line-height: 1.7;
     color: #545454;
 }
