@@ -528,6 +528,11 @@ a {
     transition: all 0.3s ease;
 }
 
+.faq-search-container {
+    max-width: 500px;
+    transition: all ease 0.5s;
+}
+
 .search-input {
     color: var(--white);
     background-color: var(--search-input-bg);
@@ -1033,24 +1038,24 @@ select {
 
 .left-content h1 {
     font-size: 48px;
-    font-weight: 700;
+    font-family: 'semibold';
     line-height: 1.1;
     margin-bottom: 24px;
-    color: #1a1a1a;
+    color: var(--black);
 }
 
 .left-content p {
     font-size: 15px;
     line-height: 1.6;
-    color: #666;
+    color: #545454;
 }
 
 .right-section {
-    border-top: 1px solid #d4d4d4;
+    border-top: 1px solid var(--black);
 }
 
 .faq-item {
-    border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid var(--black);
     padding: 24px 0;
 }
 
@@ -1064,14 +1069,14 @@ select {
 
 .faq-question h3 {
     font-size: 18px;
-    font-weight: 600;
-    color: #1a1a1a;
+    font-family: 'semibold';
+    color: #2E2E5A;
     padding-right: 20px;
 }
 
 .faq-toggle {
     font-size: 20px;
-    color: #1a1a1a;
+    color: #2E2E5A;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -1090,7 +1095,7 @@ select {
     padding-top: 16px;
     font-size: 15px;
     line-height: 1.7;
-    color: #575757;
+    color: #545454;
 }
 
 .faq-item.active .faq-answer {
@@ -2890,6 +2895,10 @@ select:focus {
         width: fit-content;
     }
 
+    .faq-search-container {
+        width: 90%;
+    }
+
     .tags-button {
         width: fit-content;
     }
@@ -3068,6 +3077,10 @@ select:focus {
         gap: 1rem;
         flex-direction: column;
         width: fit-content;
+    }
+
+    .faq-search-container {
+        width: 90%;
     }
 
     .form-container {
