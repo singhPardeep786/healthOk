@@ -2009,12 +2009,16 @@ select:focus {
 }
 
 .scale-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+    display: flex; 
+    justify-content: 
+    space-between; 
+    margin-top: 6px;
     color: #6F6B63;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+}
+
+.scale-labels span {
+    flex: 1; 
+    text-align: center;
 }
 
 .buttons {
